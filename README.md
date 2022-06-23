@@ -1,7 +1,6 @@
 # front-end
-<<<<<<< HEAD
 
-This template should help get you started developing with Vue 3 in Vite.
+AUT-Daralfonoon website front-end
 
 ## Recommended IDE Setup
 
@@ -28,6 +27,4 @@ npm run dev
 ```sh
 npm run build
 ```
-=======
-AUT-Daralfonoon website front-end
->>>>>>> a376e1c7fca38037270055b9164b16669561200c
+
