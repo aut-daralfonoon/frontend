@@ -6,6 +6,6 @@ import HelloWorld from '../components/HelloWorld.vue'
 
 <template>
   <main>
-    <HelloWorld msg="workshop" />
+    <HelloWorld :msg="'event: ' + this.$route.params.id" />
   </main>
 </template>
