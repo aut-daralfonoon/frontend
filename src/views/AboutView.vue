@@ -1,13 +1,11 @@
-<template>
-$END$
-</template>
+<script setup>
 
-<script>
-export default {
-name: "AboutView"
-}
+import HelloWorld from '../components/HelloWorld.vue'
+
 </script>
 
-<style scoped>
-
-</style>
+<template>
+  <main>
+    <HelloWorld msg="about" />
+  </main>
+</template>
