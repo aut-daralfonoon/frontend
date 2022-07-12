@@ -27,6 +27,10 @@ export const useEventsStore = defineStore({
         // returning the event
         return e;
       }
+    },
+    // getting all events
+    getAllEvents: (state) => {
+      return state.events;
     }
   },
   // store actions

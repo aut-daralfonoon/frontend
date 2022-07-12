@@ -16,11 +16,8 @@ st.importEvents()
   <RouterLink to="/about">
     About us
   </RouterLink>
-  <RouterLink to="/event/1">
-    Event 1
-  </RouterLink>
-  <RouterLink to="/event/2">
-    Event 2
+  <RouterLink v-for="event in eventStore.getAllEvents" :to="'/event/' + event.id">
+    {{ "Event " + event.title + " " + event.id }}
   </RouterLink>
   <RouterView />
 </template>
@@ -29,9 +26,10 @@ st.importEvents()
 import { useEventsStore } from "./stores/events"
 
 export default {
-  mounted() {
-    // testing our event store
-    console.log(useEventsStore().getEventById(1).title)
+  data() {
+    return {
+      eventStore: useEventsStore(),
+    }
   }
 }
 </script>
