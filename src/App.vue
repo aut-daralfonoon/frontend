@@ -1,22 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import { useEventsStore } from "./stores/events"
-
-export default {
-  setup() {
-    // creating our events store
-    const st = useEventsStore()
-
-    // importing events
-    st.importEvents()
-
-    // get event by id function
-    let getEventById = st.getEventById
-
-    // testing our event store
-    console.log(getEventById(1))
-  }
-}
 </script>
 
 <template>
@@ -34,6 +17,23 @@ export default {
   </RouterLink>
   <RouterView />
 </template>
+
+<script>
+import { useEventsStore } from "./stores/events"
+
+export default {
+  mounted() {
+    // creating our events store
+    const st = useEventsStore()
+
+    // importing events
+    st.importEvents()
+
+    // testing our event store
+    console.log(st.getEventById(1).title)
+  }
+}
+</script>
 
 <style>
 

@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import {defineStore} from 'pinia'
 
 export const useEventsStore = defineStore({
   id: 'events',
@@ -8,12 +8,14 @@ export const useEventsStore = defineStore({
   getters: {
     getEventById: (state) => {
       return (id) => {
+        let e = null;
         state.events.forEach((event) => {
           if (event.id === id) {
-            return event;
+            console.log(id)
+            e = event;
           }
-        })
-        return null
+        });
+        return e;
       }
     }
   },
