@@ -6,14 +6,15 @@ export const useEventsStore = defineStore({
     events: [],
   }),
   getters: {
-    getEvent: (state, id) => {
-      state.events.forEach((event) => {
-        if (event.id === id) {
-          return event;
-        }
-      });
-
-      return null;
+    getEventById: (state) => {
+      return (id) => {
+        state.events.forEach((event) => {
+          if (event.id === id) {
+            return event;
+          }
+        })
+        return null
+      }
     }
   },
   actions: {
