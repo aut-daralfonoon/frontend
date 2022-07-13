@@ -1,6 +1,10 @@
 /* all */
 * {
+    /* reset sizing */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+    /* move to right */
+    direction: rtl;
 }

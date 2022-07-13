@@ -25,7 +25,7 @@ export default {
 
 /* Style the header links */
 .header a {
-  float: left;
+  float: right;
   color: black;
   text-align: center;
   padding: 12px;
@@ -33,6 +33,7 @@ export default {
   font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
+  margin-left: 2px;
 }
 
 /* Change the background color on mouse-over */
@@ -52,7 +53,7 @@ export default {
   .header a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: right;
   }
 }
 </style>
