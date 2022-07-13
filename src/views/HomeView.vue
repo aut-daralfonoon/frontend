@@ -16,6 +16,7 @@ import { useEventsStore } from "../stores/events"
             :id="event.id"
             :title="event.title"
             :poster="event.poster"
+            class="event-box"
         ></SmallEvent>
     </div>
   </main>
@@ -23,9 +24,26 @@ import { useEventsStore } from "../stores/events"
 
 <style scoped>
 .x-container {
+  padding: 10px 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content: center;
+}
+
+.event-box {
+  flex: 1 0 25%; /* explanation below */
+  margin: 0 25px 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .x-container {
+    flex-direction: column;
+  }
+
+  .event-box {
+    margin: 20px 5px;
+  }
 }
 </style>

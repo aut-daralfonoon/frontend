@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
 }
 </script>
 
@@ -14,7 +14,7 @@ export default {
 /* Style the footer with a background and some padding */
 .footer {
   /* send footer to bottom of page */
-  position:absolute;
+  position: absolute;
   bottom:0;
   width: 100%;
   /* other styles */
@@ -23,5 +23,12 @@ export default {
   background-color: #efe1ba;
   text-align: center;
   padding: 10px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 800px) {
+  .footer {
+    position: static !important;
+  }
 }
 </style>

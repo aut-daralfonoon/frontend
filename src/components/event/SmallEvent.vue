@@ -25,7 +25,7 @@ defineProps({
       {{ title }}
     </h4>
     <RouterLink class="view-btn" :to="'/event/' + id">
-      View More
+      {{ "توضیحات بیشتر" }}
     </RouterLink>
   </div>
 </template>
