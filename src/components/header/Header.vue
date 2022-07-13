@@ -20,17 +20,17 @@ export default {
 .header {
   overflow: hidden;
   background-color: #efe1ba;
-  padding: 10px;
+  padding: 5px 20px;
 }
 
 /* Style the header links */
 .header a {
+  font-size: 0.8em;
   float: right;
   color: black;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
   text-decoration: none;
-  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
   margin-left: 2px;
