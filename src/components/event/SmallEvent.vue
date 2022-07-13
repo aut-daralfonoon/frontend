@@ -15,7 +15,7 @@ defineProps({
 
 <script>
 export default {
-  name: "FullEvent"
+  name: "SmallEvent"
 }
 </script>
 

@@ -1,6 +1,6 @@
 <script setup>
 // importing vue components
-import FullEvent from "../components/event/FullEvent";
+import FullEvent from "../components/event/Event";
 </script>
 
 <template>
