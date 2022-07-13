@@ -1,6 +1,8 @@
 <script setup>
+// importing view component
+import Header from "./components/header/Header";
 // importing router link and router view
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 // importing the event store
 import { useEventsStore } from "./stores/events";
 
@@ -10,14 +12,7 @@ useEventsStore().importEvents()
 
 <template>
   <main>
-    <header>
-      <RouterLink to="/">
-        Home
-      </RouterLink>
-      <RouterLink to="/about">
-        About us
-      </RouterLink>
-    </header>
+    <Header></Header>
     <!-- Router view -->
     <RouterView />
     <!-- footer -->
