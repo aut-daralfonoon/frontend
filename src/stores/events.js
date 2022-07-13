@@ -41,5 +41,15 @@ export const useEventsStore = defineStore({
     importEvents() {
       this.events = getEvents()
     },
+    // this method checks the event existence
+    isEventValid(id) {
+      let flag = false;
+      this.events.forEach((event) => {
+        if (event.id === id) {
+          flag = true;
+        }
+      });
+      return flag;
+    }
   }
 })
