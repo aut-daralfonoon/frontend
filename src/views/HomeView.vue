@@ -8,21 +8,21 @@ import { useEventsStore } from "../stores/events"
 
 <template>
   <main>
-    <div class="big-box">
+    <!-- x container holds the events in home view -->
+    <div class="x-container">
       <!-- looping in all events and creating theirs links -->
-      <div v-for="event in useEventsStore().getAllEvents">
         <SmallEvent
+            v-for="event in useEventsStore().getAllEvents"
             :id="event.id"
             :title="event.title"
             :poster="event.poster"
         ></SmallEvent>
-      </div>
     </div>
   </main>
 </template>
 
 <style scoped>
-.big-box {
+.x-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

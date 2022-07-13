@@ -5,6 +5,7 @@ import Event from "../components/event/Event.vue";
 
 <template>
   <main>
+    <!-- creating an event component -->
     <Event :msg="'event: ' + this.$route.params.id" />
   </main>
 </template>

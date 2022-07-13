@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    About
+    {{ "توضیحاتی راجب مجموعه دارالفنون امیرکبیر" }}
   </main>
 </template>
