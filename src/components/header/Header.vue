@@ -1,10 +1,10 @@
 <template>
     <header class="header">
       <RouterLink to="/" active-class="active">
-        Home
+        {{ "خانه" }}
       </RouterLink>
       <RouterLink to="/about" active-class="active">
-        About us
+        {{ "درباره ما" }}
       </RouterLink>
     </header>
 </template>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-/* Style the header with a grey background and some padding */
+/* Style the header with a background and some padding */
 .header {
   overflow: hidden;
   background-color: #efe1ba;
