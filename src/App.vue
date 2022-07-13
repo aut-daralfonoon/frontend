@@ -1,8 +1,11 @@
 <script setup>
 // importing view component
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+
 // importing router link and router view
 import { RouterView } from 'vue-router'
+
 // importing the event store
 import { useEventsStore } from "./stores/events";
 
@@ -15,10 +18,7 @@ useEventsStore().importEvents()
     <Header></Header>
     <!-- Router view -->
     <RouterView />
-    <!-- footer -->
-    <footer>
-      Footer
-    </footer>
+    <Footer></Footer>
   </main>
 </template>
 
