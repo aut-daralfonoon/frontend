@@ -1,7 +1,7 @@
 <script setup>
 // importing view component
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header.vue";
+import Footer from "./components/footer/Footer.vue";
 
 // importing router link and router view
 import { RouterView } from 'vue-router'
