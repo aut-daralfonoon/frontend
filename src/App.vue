@@ -17,11 +17,15 @@ useEventsStore().importEvents()
   <main>
     <Header></Header>
     <!-- Router view -->
-    <RouterView />
+    <RouterView class="little-pad" />
     <Footer></Footer>
   </main>
 </template>
 
 <style>
 @import './assets/base.css';
+
+.little-pad {
+  padding: 5px 0;
+}
 </style>

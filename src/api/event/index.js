@@ -5,7 +5,7 @@ export function getEvents() {
     return [
         {
             id: 1,
-            title: "Event Title",
+            title: "کارگاه گیت",
             description: "Event description",
             date: "17:00 2/2/2022",
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
@@ -22,7 +22,7 @@ export function getEvents() {
         },
         {
             id: 2,
-            title: "Event Title",
+            title: "پیاده سازی http service با زبان Golang",
             description: "Event description",
             date: "17:00 2/2/2022",
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",

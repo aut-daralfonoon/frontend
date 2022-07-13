@@ -18,12 +18,12 @@ defineProps({
 
 <template>
   <div>
-    <h3>
-      {{ title }}
-    </h3>
     <div>
       <img :src="poster" :alt="title + '_logo'" class="beauty-img" />
     </div>
+    <h4 style="margin: 5px 0;">
+      {{ title }}
+    </h4>
     <RouterLink class="view-btn" :to="'/event/' + id">
       View More
     </RouterLink>
