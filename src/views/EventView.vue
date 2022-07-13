@@ -1,11 +1,10 @@
 <script setup>
-
-import HelloWorld from '../components/HelloWorld.vue'
-
+// importing vue components
+import Event from "../components/event/Event";
 </script>
 
 <template>
   <main>
-    <HelloWorld :msg="'event: ' + this.$route.params.id" />
+    <Event :msg="'event: ' + this.$route.params.id" />
   </main>
 </template>
