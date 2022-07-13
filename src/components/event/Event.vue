@@ -2,6 +2,13 @@
 // importing the event store
 import { useEventsStore } from "../../stores/events";
 
+// defining the event props
+defineProps({
+  id: {
+    type: Number,
+    required: true
+  }
+})
 </script>
 
 <template>
@@ -15,7 +22,7 @@ export default {
   name: "Event",
   data() {
     return {
-      event: useEventsStore().getEventById(Number(this.$route.params.id))
+      event: useEventsStore().getEventById(this.id)
     }
   },
 }

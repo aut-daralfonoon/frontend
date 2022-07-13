@@ -10,11 +10,17 @@ import { useEventsStore } from "../stores/events"
   <main>
     <!-- creating an event component -->
     <Event
-        v-if="useEventsStore().isEventValid(this.$route.params.id)"
-        :msg="'event: ' + this.$route.params.id"
+        v-if="useEventsStore().isEventValid(Number(this.$route.params.id))"
+        :id="Number(this.$route.params.id)"
     />
-    <h3 v-else>
-      {{ "متاسفانه رویداد انتخابی یافت نشد!" }}
+    <h3 v-else class="center-text">
+      {{ "متاسفانه رویداد انتخابی شما یافت نشد!" }}
     </h3>
   </main>
 </template>
+
+<style scoped>
+.center-text {
+  text-align: center;
+}
+</style>
