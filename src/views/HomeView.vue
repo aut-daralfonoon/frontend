@@ -24,7 +24,7 @@ import { useEventsStore } from "../stores/events"
 
 <style scoped>
 .x-container {
-  padding: 10px 50px;
+  padding: 20px 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -34,7 +34,7 @@ import { useEventsStore } from "../stores/events"
 
 .event-box {
   flex: 1 0 25%; /* explanation below */
-  margin: 0 25px 20px;
+  margin: 0 25px 25px;
 }
 
 @media screen and (max-width: 800px) {

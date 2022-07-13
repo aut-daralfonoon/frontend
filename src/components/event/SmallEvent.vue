@@ -18,15 +18,17 @@ defineProps({
 
 <template>
   <div>
-    <div>
+    <div style="text-align: center;">
       <img :src="poster" :alt="title + '_logo'" class="beauty-img" />
     </div>
-    <h4 style="margin: 5px 0;">
+    <h4 style="margin: 5px 0; text-align: center;">
       {{ title }}
     </h4>
-    <RouterLink class="view-btn" :to="'/event/' + id">
-      {{ "توضیحات بیشتر" }}
-    </RouterLink>
+    <div style="text-align: center;">
+      <RouterLink class="view-btn" :to="'/event/' + id">
+        {{ "توضیحات بیشتر" }}
+      </RouterLink>
+    </div>
   </div>
 </template>
 
@@ -38,26 +40,42 @@ export default {
 
 <style scoped>
 .beauty-img {
-  width: 100px;
+  position: relative;
+  width: 80px;
   border-radius: 5px;
+  top: 0;
+  /* setting a transition */
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition:all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.beauty-img:hover {
+  top: -5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 }
 
 .view-btn {
+  /* font size */
+  font-size: 0.8em;
+  /* other styles */
   border-radius: 5px;
   width: 50px;
-  padding: 0 10px;
+  padding: 5px 10px;
   border: 1px solid black;
   text-decoration: none;
   outline: none;
   color: black;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  /* setting a transition */
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition:all 0.4s;
+  -o-transition: all 0.4s;
 }
 
 .view-btn:hover {
-  border-radius: 10px;
-  border: 1px solid #5c5c5c;
-  color: #5c5c5c;
-  transition: all 0.8s
+  background-color: #ada489;
+  color: black;
 }
 </style>
