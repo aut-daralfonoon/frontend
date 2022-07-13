@@ -1,3 +1,9 @@
+/* font */
+@font-face {
+    font-family: "Iran Sans";
+    src: url("./fonts/iran-sans.ttf");
+}
+
 /* all */
 * {
     /* reset sizing */
@@ -7,4 +13,7 @@
 
     /* move to right */
     direction: rtl;
+    
+    /* font */
+    font-family: "Iran Sans", serif;
 }
