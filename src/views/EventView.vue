@@ -1,10 +1,10 @@
 <script setup>
 // importing vue components
-import Event from "../components/event/Event";
+import FullEvent from "../components/event/FullEvent";
 </script>
 
 <template>
   <main>
-    <Event :msg="'event: ' + this.$route.params.id" />
+    <FullEvent :msg="'event: ' + this.$route.params.id" />
   </main>
 </template>
