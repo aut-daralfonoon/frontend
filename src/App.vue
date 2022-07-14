@@ -18,7 +18,11 @@ useEventsStore().importEvents()
     <!-- Header component -->
     <Header v-if="this.$route.name !== 'home'"></Header>
     <!-- Router view -->
-    <RouterView class="little-pad" />
+    <router-view class="little-pad" v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.path" />
+      </transition>
+    </router-view>
     <!-- Footer component -->
     <Footer v-if="this.$route.name !== 'home'"></Footer>
   </main>
