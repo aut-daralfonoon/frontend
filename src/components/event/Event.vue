@@ -1,7 +1,4 @@
 <script setup>
-// importing the event store
-import { useEventsStore } from "../../stores/events";
-
 // defining the event props
 defineProps({
   id: {
@@ -12,41 +9,20 @@ defineProps({
 </script>
 
 <template>
-  <div>
-    <div>
-      <div>
-        <img :src="event.poster" alt="poster" width="100" />
-      </div>
-      <div>
-        <div>
-          <div>
-            <img :src="event.presenter.image" alt="presenter" />
-          </div>
-          <div>
-            <img :src="event.presenter.company.logo" alt="company" />
-          </div>
-        </div>
-        <div>
-          <h3>
-            {{ event.title }}
-          </h3>
-          <p>
-            {{ event.description }}
-          </p>
-          <span>
-            Time: {{ event.time }}
-          </span>
-          <span>
-            Presenter: {{ event.presenter.name }}
-          </span>
-        </div>
-      </div>
+  <div class="e-container">
+    <div class="e-text">
+      {{ event.title }}
     </div>
-    <h1 class="green">{{ event.title }}</h1>
+    <div class="e-image">
+      <img :src="event.poster" alt="event poster" />
+    </div>
   </div>
 </template>
 
 <script>
+// importing the event store
+import { useEventsStore } from "../../stores/events";
+
 export default {
   name: "Event",
   data() {
@@ -58,5 +34,45 @@ export default {
 </script>
 
 <style scoped>
+.e-container {
+  /* flex */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+  /* container style */
+  width: 60%;
+  margin: 40px auto;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);;
+
+  /* colors */
+  background-color: #efe1ba;
+}
+
+.e-text {
+  width: 60%;
+}
+
+.e-image {
+  width: 40%;
+}
+
+@media screen and (max-width: 1200px) {
+  .e-container {
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+  }
+
+  .e-text {
+    width: 100%;
+  }
+
+  .e-image {
+    width: 100%;
+    overflow: hidden;
+  }
+}
 </style>
