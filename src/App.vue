@@ -1,7 +1,6 @@
 <script setup>
 // importing view component
 import Header from "./components/header/Header.vue";
-import Footer from "./components/footer/Footer.vue";
 
 // importing router link and router view
 import { RouterView } from 'vue-router'
@@ -23,8 +22,6 @@ useEventsStore().importEvents()
         <component :is="Component" :key="$route.path" />
       </transition>
     </router-view>
-    <!-- Footer component -->
-    <Footer v-if="this.$route.name !== 'home'"></Footer>
   </main>
 </template>
 

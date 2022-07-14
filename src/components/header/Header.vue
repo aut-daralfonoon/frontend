@@ -3,6 +3,9 @@
       <RouterLink to="/" active-class="active">
         {{ "خانه" }}
       </RouterLink>
+      <RouterLink to="/events" active-class="active">
+        {{ "رویدادها" }}
+      </RouterLink>
       <RouterLink to="/about" active-class="active">
         {{ "درباره ما" }}
       </RouterLink>
