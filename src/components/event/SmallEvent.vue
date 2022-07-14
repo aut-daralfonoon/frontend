@@ -86,4 +86,20 @@ export default {
   -webkit-transition:opacity 0.5s;
   -o-transition: opacity 0.5s;
 }
+
+@media screen and (max-width: 800px) {
+  .event-row {
+    width: 80%;
+  }
+
+  .event-row:hover {
+    width: 80%;
+  }
+
+  .view-btn {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 </style>
