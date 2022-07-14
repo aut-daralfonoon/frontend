@@ -24,17 +24,15 @@ import { useEventsStore } from "../stores/events"
 
 <style scoped>
 .x-container {
-  padding: 20px 50px;
+  padding: 50px 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
+  align-items: center;
 }
 
 .event-box {
-  flex: 1 0 25%; /* explanation below */
-  margin: 0 25px 25px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 800px) {
