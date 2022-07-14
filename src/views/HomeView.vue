@@ -37,11 +37,31 @@
   background-color: #625c4e;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
+  /* setting a transition */
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition:all 0.4s;
+  -o-transition: all 0.4s;
 }
 
 .c-item-left {
   background-color: #000000;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
+  /* setting a transition */
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition:all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.c-item-right:hover {
+  background-color: #7a7260;
+  width: 225px;
+}
+
+.c-item-left:hover {
+  background-color: #333333;
+  width: 225px;
 }
 </style>
