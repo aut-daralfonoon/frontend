@@ -3,24 +3,40 @@
 
 <template>
   <main>
-   <div class="container">
-     <RouterLink class="c-item c-item-right" to="events">
-       {{ "رویدادها" }}
-     </RouterLink>
-     <RouterLink class="c-item c-item-left" to="about">
-       {{ "درباره ما" }}
-     </RouterLink>
-   </div>
+    <div class="row">
+      <h1 style="margin-bottom: 40px;">
+        {{ "دارالفنون امیرکبیر" }}
+      </h1>
+      <div class="container">
+        <RouterLink class="c-item c-item-right" to="events">
+          {{ "رویدادها" }}
+        </RouterLink>
+        <RouterLink class="c-item c-item-left" to="about">
+          {{ "درباره ما" }}
+        </RouterLink>
+      </div>
+    </div>
   </main>
 </template>
 
+<script>
+
+</script>
+
 <style scoped>
-.container {
-  padding: 0;
+.row {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 90vh;
+}
+
+.container {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .c-item {
