@@ -16,11 +16,11 @@ useEventsStore().importEvents()
 <template>
   <main>
     <!-- Header component -->
-    <Header></Header>
+    <Header v-if="this.$route.name !== 'home'"></Header>
     <!-- Router view -->
     <RouterView class="little-pad" />
     <!-- Footer component -->
-    <Footer></Footer>
+    <Footer v-if="this.$route.name !== 'home'"></Footer>
   </main>
 </template>
 
