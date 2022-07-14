@@ -112,7 +112,7 @@ export default {
   background-color: #ada489;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .e-container {
     flex-direction: column;
     text-align: center;
@@ -129,6 +129,16 @@ export default {
     border-top-left-radius: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+
+  .et-image {
+    float: none;
+  }
+
+  .r-btn {
+    float: none;
+    display: block;
+    margin: 5px auto;
   }
 }
 </style>
