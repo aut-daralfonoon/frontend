@@ -10,26 +10,39 @@
       {{ "درباره ما" }}
     </RouterLink>
   </header>
-  <button v-on:click="toggle_display">
-    Click me
+  <button id="toggle-btn" class="t-btn" v-on:click="toggle_display">
+    {{ this.c_up }}
   </button>
 </template>
 
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      c_up: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"currentColor\" class=\"bi bi-caret-up-square-fill\" viewBox=\"0 0 16 16\">\n" +
+          "  <path d=\"M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 9h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5A.5.5 0 0 0 4 11z\"/>\n" +
+          "</svg>",
+      c_down: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" fill=\"currentColor\" class=\"bi bi-caret-down-square-fill\" viewBox=\"0 0 16 16\">\n" +
+          "  <path d=\"M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6H4z\"/>\n" +
+          "</svg>"
+    }
+  },
   mounted() {
     this.toggle_display()
   },
   methods: {
     toggle_display() {
       const el = document.getElementsByClassName("header").item(0);
-      if (el.style.height === "55px") {
+      const btn = document.getElementById("toggle-btn")
+      if (el.style.height === "70px") {
         el.style.height = "0";
         el.style.padding = "0"
+        btn.innerHTML = this.c_down
       } else {
-        el.style.height = "55px";
-        el.style.padding = "5px 20px";
+        el.style.height = "70px";
+        el.style.padding = "10px 20px";
+        btn.innerHTML = this.c_up
       }
     }
   }
@@ -41,8 +54,8 @@ export default {
 .header {
   overflow: hidden;
   background-color: #efe1ba;
-  padding: 5px 20px;
-  height: 55px;
+  padding: 10px 20px;
+  height: 70px;
   /* setting a transition */
   transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -76,7 +89,15 @@ export default {
 }
 
 .t-btn {
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  padding: 4px 10px;
   display: block;
+  margin-right: 20px;
+  background-color: #efe1ba;
+  border: 0 solid black;
+  outline: none;
+  color: black;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
