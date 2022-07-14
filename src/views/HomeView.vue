@@ -20,29 +20,38 @@
 </template>
 
 <script>
-const elId = "inc-name"
-const text = "دارالفنون امیرکبیر"
+// the following script does the header animation in home page
+const elementID = "inc-name";
+const text = "دارالفنون امیرکبیر";
 let index = 0;
 
+// write function updates the header
 function write() {
+  // update time is 0.3 seconds
   let time = 300;
+  // creating the message
   let message = text.slice(0, index)
+  // updating index
   index++;
   if (index === text.length + 1) {
     index = 0;
+    // after the message is complete wait 3 seconds
     time = 3000;
   } else {
     message = message + "|";
   }
 
-  document.getElementById(elId).innerText = message
+  // get the element and update the text
+  document.getElementById(elementID).innerText = message;
 
+  // recall this function
   setTimeout(write, time);
 }
 
 export default {
   name: "HomeView",
   mounted() {
+    // when mounted, call the script for header change
     write();
   }
 }
