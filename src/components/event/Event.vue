@@ -13,9 +13,7 @@ defineProps({
     <div class="e-text">
       {{ event.title }}
     </div>
-    <div class="e-image">
-      <img :src="event.poster" alt="event poster" />
-    </div>
+    <img class="e-image" :src="event.poster" alt="event poster" />
   </div>
 </template>
 
@@ -43,7 +41,6 @@ export default {
   /* container style */
   width: 60%;
   margin: 40px auto;
-  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);;
 
@@ -52,14 +49,18 @@ export default {
 }
 
 .e-text {
+  padding: 10px;
   width: 60%;
 }
 
 .e-image {
+  padding: 0;
   width: 40%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .e-container {
     flex-direction: column;
     text-align: center;
@@ -73,6 +74,9 @@ export default {
   .e-image {
     width: 100%;
     overflow: hidden;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 }
 </style>
