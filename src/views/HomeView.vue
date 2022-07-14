@@ -4,7 +4,7 @@
 <template>
   <main>
     <div class="row">
-      <h1 style="margin-bottom: 40px;">
+      <h1 id="inc-name" style="margin-bottom: 40px;">
         {{ "دارالفنون امیرکبیر" }}
       </h1>
       <div class="container">
@@ -20,7 +20,32 @@
 </template>
 
 <script>
+const elId = "inc-name"
+const text = "دارالفنون امیرکبیر"
+let index = 0;
 
+function write() {
+  let time = 300;
+  let message = text.slice(0, index)
+  index++;
+  if (index === text.length + 1) {
+    index = 0;
+    time = 3000;
+  } else {
+    message = message + "|";
+  }
+
+  document.getElementById(elId).innerText = message
+
+  setTimeout(write, time);
+}
+
+export default {
+  name: "HomeView",
+  mounted() {
+    write();
+  }
+}
 </script>
 
 <style scoped>
