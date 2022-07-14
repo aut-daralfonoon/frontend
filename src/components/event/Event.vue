@@ -11,7 +11,33 @@ defineProps({
 <template>
   <div class="e-container">
     <div class="e-text">
-      {{ event.title }}
+      <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
+        {{ event.title }}
+      </h2>
+      <p style="margin: 5px 0;">
+        {{ event.description }}
+      </p>
+      <div>
+        <small>
+          {{ "تاریخ برگزاری رویداد" + " " + event.date }}
+        </small>
+      </div>
+      <div style="margin-top: 10px;">
+        <h4  style="border-bottom: 1px solid gray; padding: 5px 0;">
+          {{ "برگزارکننده رویداد" }}
+        </h4>
+        <h4 style="margin: 5px 0;">
+          {{ event.presenter.name }}
+        </h4>
+        <small>
+          {{ event.presenter.title + " در " + event.presenter.company.name }}
+        </small>
+        <p style="margin: 10px 0;">
+          {{ event.presenter.description }}
+        </p>
+        <img class="et-image" :src="event.presenter.image" alt="presenter" />
+        <img class="et-image" :src="event.presenter.company.logo" alt="logo" />
+      </div>
     </div>
     <img class="e-image" :src="event.poster" alt="event poster" />
   </div>
@@ -58,6 +84,14 @@ export default {
   width: 40%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+.et-image {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 5px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 800px) {
