@@ -14,25 +14,26 @@ defineProps({
       <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
         {{ event.title }}
       </h2>
-      <p style="margin: 5px 0;">
+      <p style="margin: 15px 0;">
         {{ event.description }}
       </p>
-      <div>
-        <small>
-          {{ "تاریخ برگزاری رویداد" + " " + event.date }}
-        </small>
-      </div>
-      <div style="margin-top: 10px;">
+      <small style="font-size: 0.6em;">
+        {{ "تاریخ برگزاری رویداد" + " " + event.date }}
+      </small>
+      <button class="r-btn">
+        {{ "ثبت نام" }}
+      </button>
+      <div style="margin-top: 50px;">
         <h4  style="border-bottom: 1px solid gray; padding: 5px 0;">
           {{ "برگزارکننده رویداد" }}
         </h4>
-        <h4 style="margin: 5px 0;">
+        <h4 style="margin: 15px 0;">
           {{ event.presenter.name }}
         </h4>
-        <small>
+        <small style="font-size: 0.6em;">
           {{ event.presenter.title + " در " + event.presenter.company.name }}
         </small>
-        <p style="margin: 10px 0;">
+        <p style="margin: 20px 0;">
           {{ event.presenter.description }}
         </p>
         <img class="et-image" :src="event.presenter.image" alt="presenter" />
@@ -75,7 +76,7 @@ export default {
 }
 
 .e-text {
-  padding: 10px;
+  padding: 20px;
   width: 60%;
 }
 
@@ -87,11 +88,28 @@ export default {
 }
 
 .et-image {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   float: left;
   margin: 5px;
   border-radius: 50%;
+}
+
+.r-btn {
+  font-size: 0.7em;
+  padding: 3px;
+  color: white;
+  background-color: #625c4e;
+  outline: none;
+  border: 1px solid #625c4e;
+  border-radius: 2px;
+  float: left;
+  margin-left: 5px;
+}
+
+.r-btn:hover {
+  color: black;
+  background-color: #ada489;
 }
 
 @media screen and (max-width: 800px) {
