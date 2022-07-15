@@ -10,7 +10,7 @@ export const useEventsStore = defineStore({
   id: 'events',
   // events store has only one array of events
   state: () => ({
-    step: 3,
+    step: 1,
     total: 0,
     events: [],
   }),
@@ -37,6 +37,14 @@ export const useEventsStore = defineStore({
       return (index) => {
         return state.events.slice(index, index + state.step);
       }
+    },
+    // get total number of events
+    getTotalNumberOfEvents: (state) => {
+      return state.total
+    },
+    // get step number
+    getStep: (state) => {
+      return state.step
     },
     // get all indexes
     getIndexes: (state) => {

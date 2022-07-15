@@ -21,10 +21,29 @@ import { useEventsStore } from "../stores/events"
     </div>
     <div class="btn-row">
       <button
-          v-for="index in useEventsStore().getIndexes" v-on:click="this.index = index.key"
+          v-if="this.index+useEventsStore().getStep < useEventsStore().getTotalNumberOfEvents"
+          v-on:click="this.index = this.index+useEventsStore().getStep"
+      >
+        {{ "بعدی" }}
+      </button>
+      <button v-else class="span-row">
+        {{ "بعدی" }}
+      </button>
+      <button
+          v-for="index in useEventsStore().getIndexes"
+          v-on:click="this.index = index.key"
           v-bind:class="index.key === this.index ? 'btn-row-active' : ''"
       >
         {{ index.value }}
+      </button>
+      <button
+          v-if="this.index-useEventsStore().getStep >= 0"
+          v-on:click="this.index = this.index-useEventsStore().getStep"
+      >
+        {{ "قبلی" }}
+      </button>
+      <button v-else class="span-row">
+        {{ "قبلی" }}
       </button>
     </div>
   </main>
@@ -62,13 +81,20 @@ export default {
 
 .btn-row > button {
   padding: 5px 10px;
-  width: 40px;
+  width: 60px;
   height: 40px;
   margin: 0 2px;
 
   background-color: #efe1ba;
   border: 1px solid #efe1ba;
   border-radius: 2px;
+  color: black;
+}
+
+.span-row {
+  background-color: gray !important;
+  border: 1px solid gray !important;
+  border-radius: 2px !important;
   color: black;
 }
 
