@@ -26,7 +26,7 @@ defineProps({
       <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
         {{ title }}
       </h2>
-      <p style="margin: 15px 0;">
+      <p style="margin: 40px 0;">
         {{ description }}
       </p>
       <small style="font-size: 0.6em;">

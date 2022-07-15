@@ -22,7 +22,7 @@ defineProps({
       <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
         {{ name }}
       </h2>
-      <p style="margin: 15px 0;">
+      <p style="margin: 30px 0;">
         {{ description }}
       </p>
     </div>

@@ -26,12 +26,12 @@ defineProps({
       <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
         {{ name }}
       </h2>
-      <p style="margin: 15px 0;">
+      <h5 style="margin: 20px 0;">
+        {{ title }}
+      </h5>
+      <p style="margin: 30px 0;">
         {{ description }}
       </p>
-      <small style="font-size: 0.6em;">
-        {{ title }}
-      </small>
     </div>
     <img class="e-image" :src="image" alt="presenter image" />
   </div>
