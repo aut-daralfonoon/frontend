@@ -4,6 +4,10 @@ import PN from "persian-number"
 
 // defining the event props
 defineProps({
+  id: {
+    type: Number,
+    required: true,
+  },
   title: {
     type: String,
     required: true
@@ -39,9 +43,9 @@ defineProps({
       <small style="font-size: 0.6em;">
         {{ "تاریخ برگزاری رویداد" + " " + PN.convertEnToPe(date) }}
       </small>
-      <button v-if="enable" class="r-btn">
+      <RouterLink :to="'/register/' + id" v-if="enable" class="r-btn">
         {{ "ثبت نام" }}
-      </button>
+      </RouterLink>
       <button v-else class="dr-btn">
          {{ "ثبت نام" }}
       </button>

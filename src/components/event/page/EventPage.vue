@@ -39,6 +39,7 @@ defineProps({
     <Event
         v-if="current === 'event'"
         class="e-container"
+        :id="event.id"
         :title="event.title"
         :description="event.description"
         :date="event.date"

@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import EventsView from '../views/EventsView.vue'
 import EventView from '../views/EventView.vue'
+import RegisterView from '../views/RegisterView.vue'
 
 
 const router = createRouter({
@@ -29,6 +30,11 @@ const router = createRouter({
       path: '/event/:id', // a single event page
       name: 'event',
       component: EventView,
+    },
+    {
+      path: '/register/:id',
+      name: 'register',
+      component: RegisterView,
     }
   ]
 })
