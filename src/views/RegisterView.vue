@@ -1,8 +1,71 @@
 <template>
-  <main>
-    Register
+  <main class="ab-container">
+    <span style="flex-grow: 2;">
+      <span style="margin-left: 20px;">
+        {{ "لطفا ایمیل خود را وارد کنید:" }}
+      </span>
+      <input class="r-input" type="email" v-model="email" placeholder="ali@gmail.com" />
+    </span>
+    <button class="r-btn" v-on:click="send">
+      {{ "ارسال" }}
+    </button>
   </main>
 </template>
 
+<script>
+export default {
+  name: "RegisterView",
+  data() {
+    return {
+      email: ""
+    }
+  },
+  methods: {
+    send() {
+      console.log(this.$route.params.id + " " + this.email)
+    }
+  }
+}
+</script>
+
 <style scoped>
+.ab-container {
+  width: 70%;
+  margin: 50px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+
+  padding: 30px;
+
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.r-btn {
+  padding: 3px 10px;
+  width: 60px;
+
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  color: black;
+}
+
+.r-btn:hover {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+
+.r-input {
+  padding: 3px 10px;
+  direction: ltr;
+  width: 50%;
+}
 </style>
