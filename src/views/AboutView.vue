@@ -65,6 +65,7 @@
   height: 150px;
   border-radius: 50%;
   margin-right: 40px;
+  margin-bottom: 10px;
 }
 
 .ab-container {

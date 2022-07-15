@@ -4,6 +4,16 @@
     src: url("./fonts/iran-sans.ttf");
 }
 
+@font-face {
+    font-family: "Iran Nast";
+    src: url("./fonts/IranNastaliq.ttf");
+}
+
+@font-face {
+    font-family: "Mirza";
+    src: url("./fonts/Mirza.ttf");
+}
+
 /* all */
 * {
     /* reset sizing */
@@ -15,7 +25,8 @@
     direction: rtl;
     
     /* font */
-    font-family: "Iran Sans", serif;
+    font-family: "Mirza", serif;
+    font-size: 1.03em;
 }
 
 body {
