@@ -1,8 +1,20 @@
 <script setup>
 // defining the event props
 defineProps({
-  id: {
-    type: Number,
+  title: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    required: true
+  },
+  poster: {
+    type: String,
     required: true
   }
 })
@@ -12,49 +24,25 @@ defineProps({
   <div class="e-container">
     <div class="e-text">
       <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
-        {{ event.title }}
+        {{ title }}
       </h2>
       <p style="margin: 15px 0;">
-        {{ event.description }}
+        {{ description }}
       </p>
       <small style="font-size: 0.6em;">
-        {{ "تاریخ برگزاری رویداد" + " " + event.date }}
+        {{ "تاریخ برگزاری رویداد" + " " + date }}
       </small>
       <button class="r-btn">
         {{ "ثبت نام" }}
       </button>
-      <div style="margin-top: 50px;">
-        <h4  style="border-bottom: 1px solid gray; padding: 5px 0;">
-          {{ "برگزارکننده رویداد" }}
-        </h4>
-        <h4 style="margin: 15px 0;">
-          {{ event.presenter.name }}
-        </h4>
-        <small style="font-size: 0.6em;">
-          {{ event.presenter.title + " در " + event.presenter.company.name }}
-        </small>
-        <p style="margin: 20px 0;">
-          {{ event.presenter.description }}
-        </p>
-        <img class="et-image" :src="event.presenter.image" alt="presenter" />
-        <img class="et-image" :src="event.presenter.company.logo" alt="logo" />
-      </div>
     </div>
-    <img class="e-image" :src="event.poster" alt="event poster" />
+    <img class="e-image" :src="poster" alt="event poster" />
   </div>
 </template>
 
 <script>
-// importing the event store
-import { useEventsStore } from "../../../stores/events";
-
 export default {
   name: "Event",
-  data() {
-    return {
-      event: useEventsStore().getEventById(this.id)
-    }
-  },
 }
 </script>
 
@@ -85,14 +73,6 @@ export default {
   width: 40%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-}
-
-.et-image {
-  width: 80px;
-  height: 80px;
-  float: left;
-  margin: 5px;
-  border-radius: 50%;
 }
 
 .r-btn {
@@ -129,10 +109,6 @@ export default {
     border-top-left-radius: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-  }
-
-  .et-image {
-    float: none;
   }
 
   .r-btn {
