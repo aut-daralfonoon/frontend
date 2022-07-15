@@ -59,16 +59,18 @@ export default {
 
 <style scoped>
 .row {
+  height: 90vh;
+  /* flex configs */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
 }
 
 .container {
   padding: 0;
+  /* flex configs */
   display: flex;
   flex-wrap: wrap;
 }
@@ -87,6 +89,7 @@ export default {
   background-color: #625c4e;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
+
   /* setting a transition */
   transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -98,6 +101,7 @@ export default {
   background-color: #000000;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
+
   /* setting a transition */
   transition: all 0.4s;
   -moz-transition: all 0.4s;

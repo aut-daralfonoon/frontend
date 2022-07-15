@@ -13,6 +13,7 @@ import { useEventsStore } from "../stores/events"
         v-if="useEventsStore().isEventValid(Number(this.$route.params.id))"
         :id="Number(this.$route.params.id)"
     />
+    <!-- error handling for incorrect events -->
     <h3 v-else class="center-text">
       {{ "متاسفانه رویداد انتخابی شما یافت نشد!" }}
     </h3>

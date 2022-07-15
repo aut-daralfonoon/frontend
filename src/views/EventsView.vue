@@ -25,6 +25,7 @@ import { useEventsStore } from "../stores/events"
 <style scoped>
 .x-container {
   padding: 50px 50px;
+  /* flex configs */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

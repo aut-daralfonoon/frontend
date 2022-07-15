@@ -55,6 +55,7 @@ export default {
 <style scoped>
 .event-row {
   width: 40%;
+
   /* other styles */
   border-radius: 5px;
   padding: 15px 10px;
@@ -62,6 +63,7 @@ export default {
   text-decoration: none;
   outline: none;
   color: black;
+
   /* setting a transition */
   transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -81,6 +83,8 @@ export default {
   opacity: 0;
   color: inherit;
   float: left;
+
+  /* setting a transition */
   transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -webkit-transition:opacity 0.5s;

@@ -1,9 +1,10 @@
 <script setup>
-// defining the event props
+// importing vue components
 import Event from "./Event.vue";
 import Company from "./Company.vue";
 import Presenter from "./Presenter.vue";
 
+// defining the event page props
 defineProps({
   id: {
     type: Number,
@@ -97,6 +98,7 @@ export default {
   /* colors */
   background-color: #efe1ba;
 
+  /* setting a transition */
   transition: all 0.5s;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -120,6 +122,8 @@ export default {
   border: 1px solid #625c4e;
   background-color: #625c4e;
   margin-left: 10px;
+
+  /* setting a transition */
   transition: all 0.5s;
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;

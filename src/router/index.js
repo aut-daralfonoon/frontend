@@ -21,12 +21,12 @@ const router = createRouter({
       component: AboutView
     },
     {
-      path: "/events",
+      path: "/events", // all the events in home page
       name: "events",
       component: EventsView,
     },
     {
-      path: '/event/:id',
+      path: '/event/:id', // a single event page
       name: 'event',
       component: EventView,
     }

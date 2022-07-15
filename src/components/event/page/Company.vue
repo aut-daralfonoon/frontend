@@ -1,5 +1,5 @@
 <script setup>
-// defining the presenter props
+// defining the company props
 defineProps({
   name: {
     type: String,
