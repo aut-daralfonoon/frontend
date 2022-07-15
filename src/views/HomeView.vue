@@ -4,7 +4,7 @@
 <template>
   <main>
     <div class="row">
-      <h1 id="inc-name" style="margin-bottom: 40px; color: white;">
+      <h1 id="inc-name" style="margin-bottom: 40px; font-size: 2.5em;">
         {{ "دارالفنون امیرکبیر" }}
       </h1>
       <div class="container">
@@ -15,6 +15,9 @@
           {{ "درباره ما" }}
         </RouterLink>
       </div>
+      <small style="margin-top: 20px;">
+        {{ "انجمن علمی دانشجویی دانشکده مهندسی کامپیوتر دانشگاه صنعتی امیرکبیر" }}
+      </small>
     </div>
   </main>
 </template>

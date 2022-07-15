@@ -13,7 +13,9 @@ import { useEventsStore } from "../../stores/events"
       {{ "بعدی" }}
     </button>
     <button v-else class="span-row" style="width: 60px;">
-      {{ "بعدی" }}
+      <s>
+        {{ "بعدی" }}
+      </s>
     </button>
     <button
         v-for="index in useEventsStore().getIndexes"
@@ -30,7 +32,9 @@ import { useEventsStore } from "../../stores/events"
       {{ "قبلی" }}
     </button>
     <button v-else class="span-row" style="width: 60px;">
-      {{ "قبلی" }}
+      <s>
+        {{ "قبلی" }}
+      </s>
     </button>
   </div>
 </template>
@@ -67,10 +71,12 @@ export default {
   height: 40px;
   margin: 0 2px;
 
-  background-color: #efe1ba;
-  border: 1px solid #efe1ba;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 2px;
   color: black;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
 }
 
 .span-row {
@@ -78,11 +84,13 @@ export default {
   border: 1px solid gray !important;
   border-radius: 2px !important;
   color: black;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
 }
 
 .btn-row > button:hover {
-  background-color: #ada489 !important;
-  border: 1px solid #ada489 !important;
+  background-color: #000000 !important;
+  border: 1px solid #000000 !important;
   color: white;
 }
 

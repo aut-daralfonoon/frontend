@@ -53,6 +53,10 @@ export default {
 
 .event-box {
   margin: 15px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 @media screen and (max-width: 800px) {

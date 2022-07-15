@@ -59,9 +59,11 @@ export default {
 /* Style the header with a background and some padding */
 .header {
   overflow: hidden;
-  background-color: #efe1ba;
+  background-color: #ffffff;
   padding: 10px 20px;
   height: 70px;
+
+  box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.39);
 
   /* setting a transition */
   transition: all 0.5s;
@@ -85,8 +87,8 @@ export default {
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: #ada489;
-  color: black;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 /* Style the active/current link*/
@@ -101,10 +103,14 @@ export default {
   padding: 4px 10px;
   display: block;
   margin-right: 20px;
-  background-color: #efe1ba;
+  background-color: #ffffff;
   border: 0 solid black;
   outline: none;
   color: black;
+}
+
+.t-btn:hover {
+  background-color: #bbbbbb;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */

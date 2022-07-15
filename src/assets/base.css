@@ -17,3 +17,12 @@
     /* font */
     font-family: "Iran Sans", serif;
 }
+
+body {
+    min-height: 790px;
+    height: 100%;
+    background-image: url("./bg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

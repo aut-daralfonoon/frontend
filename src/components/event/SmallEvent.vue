@@ -73,8 +73,8 @@ export default {
 
 .event-row:hover {
   width: 45%;
-  background-color: #ada489;
-  border-color: #ada489;
+  background-color: #625c4e;
+  border-color: #625c4e;
   color: #ffffff;
 }
 

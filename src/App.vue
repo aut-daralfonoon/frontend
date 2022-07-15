@@ -25,10 +25,4 @@ useEventsStore().importEvents()
 /* importing the main css file of our application */
 @import './assets/base.css';
 
-.main-bg {
-  height: 100vh;
-  background-image: url("./assets/logo.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 </style>

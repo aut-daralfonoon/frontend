@@ -83,8 +83,8 @@ export default {
 }
 
 .r-btn:hover {
-  color: black;
-  background-color: #ada489;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 @media screen and (max-width: 1000px) {

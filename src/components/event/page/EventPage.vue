@@ -96,7 +96,7 @@ export default {
   border-radius: 5px;
 
   /* colors */
-  background-color: #efe1ba;
+  background-color: #ffffff;
 
   /* setting a transition */
   transition: all 0.5s;
@@ -117,10 +117,10 @@ export default {
   height: 50px;
   border-radius: 50%;
   font-size: 0.6em;
-  color: #ffffff;
+  color: #000000;
   outline: none;
-  border: 1px solid #625c4e;
-  background-color: #625c4e;
+  border: 1px solid #000000;
+  background-color: #ffffff;
   margin-left: 10px;
 
   /* setting a transition */
@@ -131,14 +131,15 @@ export default {
 }
 
 .select-btn:hover {
-  border: 1px solid #7a7260;
-  background-color: #7a7260;
-  color: black;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .active-btn {
-  background-color: #efe1ba;
-  color: black;
+  background-color: #7a7260;
+  border-color: #7a7260;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1000px) {
