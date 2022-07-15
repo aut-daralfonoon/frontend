@@ -1,6 +1,8 @@
 <script setup>
 // importing the event store
 import { useEventsStore } from "../../stores/events"
+// importing persian number
+import PN from "persian-number"
 </script>
 
 <template>
@@ -22,7 +24,7 @@ import { useEventsStore } from "../../stores/events"
         v-on:click="update(index.key)"
         v-bind:class="index.key === this.index ? 'btn-row-active' : ''"
     >
-      {{ index.value }}
+      {{ PN.convertEnToPe(index.value) }}
     </button>
     <button
         v-if="this.index-useEventsStore().getStep >= 0"

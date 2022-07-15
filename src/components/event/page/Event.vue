@@ -1,4 +1,7 @@
 <script setup>
+// importing persian number
+import PN from "persian-number"
+
 // defining the event props
 defineProps({
   title: {
@@ -34,7 +37,7 @@ defineProps({
         {{ description }}
       </p>
       <small style="font-size: 0.6em;">
-        {{ "تاریخ برگزاری رویداد" + " " + date }}
+        {{ "تاریخ برگزاری رویداد" + " " + PN.convertEnToPe(date) }}
       </small>
       <button v-if="enable" class="r-btn">
         {{ "ثبت نام" }}
