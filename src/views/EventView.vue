@@ -1,6 +1,6 @@
 <script setup>
 // importing vue components
-import Event from "../components/event/page/Event.vue";
+import EventPage from "../components/event/page/EventPage.vue";
 
 // importing the event store
 import { useEventsStore } from "../stores/events"
@@ -9,7 +9,7 @@ import { useEventsStore } from "../stores/events"
 <template>
   <main>
     <!-- creating an event component -->
-    <Event
+    <EventPage
         v-if="useEventsStore().isEventValid(Number(this.$route.params.id))"
         :id="Number(this.$route.params.id)"
     />

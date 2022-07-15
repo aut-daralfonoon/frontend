@@ -1,5 +1,9 @@
 <script setup>
 // defining the event props
+import Event from "./Event.vue";
+import Company from "./Company.vue";
+import Presenter from "./Presenter.vue";
+
 defineProps({
   id: {
     type: Number,
@@ -9,7 +13,25 @@ defineProps({
 </script>
 
 <template>
-
+  <main>
+    <Event
+        :title="event.title"
+        :description="event.description"
+        :date="event.date"
+        :poster="event.poster"
+    />
+    <Presenter
+        :name="event.presenter.name"
+        :title="event.presenter.title"
+        :description="event.presenter.description"
+        :image="event.presenter.image"
+    />
+    <Company
+        :name="event.presenter.company.name"
+        description="Something"
+        :logo="event.presenter.company.logo"
+    />
+  </main>
 </template>
 
 <script>
