@@ -18,6 +18,9 @@
 </template>
 
 <script>
+// importing registration api
+import {sendRegistration} from "../api/register";
+
 export default {
   name: "RegisterView",
   data() {
@@ -27,7 +30,7 @@ export default {
   },
   methods: {
     send() {
-      console.log(this.$route.params.id + " " + this.email)
+      sendRegistration(this.$route.params.id, this.email)
     }
   }
 }
