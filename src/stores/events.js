@@ -10,6 +10,8 @@ export const useEventsStore = defineStore({
   id: 'events',
   // events store has only one array of events
   state: () => ({
+    step: 3,
+    total: 0,
     events: [],
   }),
   // store getters
@@ -32,7 +34,25 @@ export const useEventsStore = defineStore({
     },
     // getting all events
     getAllEvents: (state) => {
-      return state.events;
+      return (index) => {
+        return state.events.slice(index, index + state.step);
+      }
+    },
+    // get all indexes
+    getIndexes: (state) => {
+      let a = [];
+      let counter = 1;
+      for (let i = 0; i < state.total; i++) {
+        if (i % state.step === 0) {
+          let temp = {
+            key: i,
+            value: counter,
+          }
+          a.push(temp);
+          counter++;
+        }
+      }
+      return a;
     }
   },
   // store actions
@@ -40,6 +60,7 @@ export const useEventsStore = defineStore({
     // this method gets the events from our back-end api
     importEvents() {
       this.events = getEvents()
+      this.total = this.events.length
     },
     // this method checks the event existence
     isEventValid(id) {
