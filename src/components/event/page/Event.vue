@@ -61,7 +61,7 @@ export default {
 
 .r-btn {
   font-size: 0.7em;
-  padding: 3px;
+  padding: 5px;
   color: white;
   background-color: #625c4e;
   outline: none;

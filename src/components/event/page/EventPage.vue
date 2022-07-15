@@ -95,6 +95,16 @@ export default {
 
   /* colors */
   background-color: #efe1ba;
+
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.e-container:hover {
+  /* other styles */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.65), 0 6px 20px 0 rgba(0, 0, 0, 0.54);
 }
 
 .select-btn {
