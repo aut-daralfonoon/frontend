@@ -1,6 +1,7 @@
 <script setup>
 // importing vue components
 import SmallEvent from "../components/event/SmallEvent.vue";
+import EventSection from "../components/event/EventSection.vue";
 
 // importing the event store
 import { useEventsStore } from "../stores/events"
@@ -19,33 +20,7 @@ import { useEventsStore } from "../stores/events"
           class="event-box"
       ></SmallEvent>
       <!-- opening the events section -->
-      <div class="btn-row">
-        <button
-            v-if="this.index+useEventsStore().getStep < useEventsStore().getTotalNumberOfEvents"
-            v-on:click="this.index = this.index+useEventsStore().getStep"
-        >
-          {{ "بعدی" }}
-        </button>
-        <button v-else class="span-row">
-          {{ "بعدی" }}
-        </button>
-        <button
-            v-for="index in useEventsStore().getIndexes"
-            v-on:click="this.index = index.key"
-            v-bind:class="index.key === this.index ? 'btn-row-active' : ''"
-        >
-          {{ index.value }}
-        </button>
-        <button
-            v-if="this.index-useEventsStore().getStep >= 0"
-            v-on:click="this.index = this.index-useEventsStore().getStep"
-        >
-          {{ "قبلی" }}
-        </button>
-        <button v-else class="span-row">
-          {{ "قبلی" }}
-        </button>
-      </div>
+      <EventSection @update-index="this.updateIndex" />
     </div>
   </main>
 </template>
@@ -55,7 +30,12 @@ export default {
   name: "EventsView",
   data() {
     return {
-      index: 0
+      index: 0,
+    }
+  },
+  methods: {
+    updateIndex(value) {
+      this.index = value
     }
   }
 }
@@ -73,45 +53,6 @@ export default {
 
 .event-box {
   margin: 15px;
-}
-
-.btn-row {
-  margin-top: 20px;
-
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn-row > button {
-  padding: 5px 10px;
-  width: 60px;
-  height: 40px;
-  margin: 0 2px;
-
-  background-color: #efe1ba;
-  border: 1px solid #efe1ba;
-  border-radius: 2px;
-  color: black;
-}
-
-.span-row {
-  background-color: gray !important;
-  border: 1px solid gray !important;
-  border-radius: 2px !important;
-  color: black;
-}
-
-.btn-row > button:hover {
-  background-color: #ada489 !important;
-  border: 1px solid #ada489 !important;
-  color: white;
-}
-
-.btn-row-active {
-  background-color: #625c4e !important;
-  border-color: #625c4e !important;
-  color: white !important;
 }
 
 @media screen and (max-width: 800px) {
