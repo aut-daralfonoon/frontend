@@ -13,6 +13,10 @@ defineProps({
     type: Date,
     required: true
   },
+  enable: {
+    type: Boolean,
+    required: true
+  },
   poster: {
     type: String,
     required: true
@@ -32,8 +36,11 @@ defineProps({
       <small style="font-size: 0.6em;">
         {{ "تاریخ برگزاری رویداد" + " " + date }}
       </small>
-      <button class="r-btn">
+      <button v-if="enable" class="r-btn">
         {{ "ثبت نام" }}
+      </button>
+      <button v-else class="dr-btn">
+         {{ "ثبت نام" }}
       </button>
     </div>
     <img class="e-image" :src="poster" alt="event poster" />
@@ -59,7 +66,7 @@ export default {
   border-bottom-left-radius: 5px;
 }
 
-.r-btn {
+.r-btn, .dr-btn {
   font-size: 0.7em;
   padding: 5px;
   color: white;
@@ -69,6 +76,10 @@ export default {
   border-radius: 2px;
   float: left;
   margin-left: 5px;
+}
+
+.dr-btn {
+  text-decoration-line: line-through;
 }
 
 .r-btn:hover {

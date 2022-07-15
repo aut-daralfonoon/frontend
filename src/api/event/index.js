@@ -8,6 +8,7 @@ export function getEvents() {
             title: "کارگاه گیت",
             description: "Event description",
             date: "17:00 2/2/2022",
+            enable: true,
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
             presenter: {
                 name: "Presenter name",
@@ -16,6 +17,7 @@ export function getEvents() {
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
                 company: {
                     name: "Company name",
+                    description: "Company description",
                     logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
                 },
             },
@@ -25,6 +27,7 @@ export function getEvents() {
             title: "پیاده سازی http service با زبان Golang",
             description: "Event description",
             date: "17:00 2/2/2022",
+            enable: false,
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
             presenter: {
                 name: "Presenter name",
@@ -33,6 +36,7 @@ export function getEvents() {
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
                 company: {
                     name: "Company name",
+                    description: "Company description",
                     logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
                 },
             },
@@ -42,6 +46,7 @@ export function getEvents() {
             title: "آشنایی با ابزار DevOps",
             description: "Event description",
             date: "17:00 2/2/2022",
+            enable: true,
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
             presenter: {
                 name: "Presenter name",
@@ -50,6 +55,7 @@ export function getEvents() {
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
                 company: {
                     name: "Company name",
+                    description: "Company description",
                     logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
                 },
             },
@@ -59,6 +65,7 @@ export function getEvents() {
             title: "استفاده از ابزار Monitoring",
             description: "Event description",
             date: "17:00 2/2/2022",
+            enable: false,
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
             presenter: {
                 name: "Presenter name",
@@ -67,6 +74,7 @@ export function getEvents() {
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
                 company: {
                     name: "Company name",
+                    description: "Company description",
                     logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
                 },
             },
@@ -76,6 +84,7 @@ export function getEvents() {
             title: "کارگاه Unit testing",
             description: "Event description",
             date: "17:00 2/2/2022",
+            enable: true,
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
             presenter: {
                 name: "Presenter name",
@@ -84,6 +93,7 @@ export function getEvents() {
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
                 company: {
                     name: "Company name",
+                    description: "Company description",
                     logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
                 },
             },
@@ -93,6 +103,7 @@ export function getEvents() {
             title: "کارگاه آموزش Docker",
             description: "Event description",
             date: "17:00 2/2/2022",
+            enable: false,
             poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
             presenter: {
                 name: "Presenter name",
@@ -101,6 +112,7 @@ export function getEvents() {
                 image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
                 company: {
                     name: "Company name",
+                    description: "Company description",
                     logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
                 },
             },
