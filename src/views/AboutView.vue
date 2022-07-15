@@ -3,6 +3,7 @@
 
 <template>
   <main class="ab-container">
+    <img class="home-logo" src="../assets/images/logo.jpg" alt="logo" />
     <h2 style="margin-bottom: 20px;">
       {{ "مجموعه دارالفنون امیرکبیر" }}
     </h2>
@@ -58,13 +59,21 @@
 </template>
 
 <style scoped>
+.home-logo {
+  float: left;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
 .ab-container {
   width: 70%;
   margin: 50px auto;
 
   background-color: #ffffff;
 
-  padding: 50px 30px;
+  padding: 25px 30px 25px;
 
   border: 1px solid #ffffff;
   border-radius: 5px;

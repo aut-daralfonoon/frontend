@@ -11,6 +11,7 @@
     <RouterLink to="/about" active-class="active">
       {{ "درباره ما" }}
     </RouterLink>
+    <img src="../assets/images/logo.jpg" alt="logo" class="header-logo" />
   </header>
   <button id="toggle-btn" class="t-btn" v-on:click="toggle_display">
     {{ this.c_up }}
@@ -89,6 +90,13 @@ export default {
 .header a:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+.header-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
 }
 
 /* Style the active/current link*/
