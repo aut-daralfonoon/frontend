@@ -20,6 +20,8 @@
 <script>
 // importing registration api
 import {sendRegistration} from "../api/register";
+// importing vue router
+import router from "../router";
 
 export default {
   name: "RegisterView",
@@ -31,6 +33,7 @@ export default {
   methods: {
     send() {
       sendRegistration(this.$route.params.id, this.email)
+      router.push('/events')
     }
   }
 }
