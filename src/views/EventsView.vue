@@ -18,33 +18,34 @@ import { useEventsStore } from "../stores/events"
           :poster="event.poster"
           class="event-box"
       ></SmallEvent>
-    </div>
-    <div class="btn-row">
-      <button
-          v-if="this.index+useEventsStore().getStep < useEventsStore().getTotalNumberOfEvents"
-          v-on:click="this.index = this.index+useEventsStore().getStep"
-      >
-        {{ "بعدی" }}
-      </button>
-      <button v-else class="span-row">
-        {{ "بعدی" }}
-      </button>
-      <button
-          v-for="index in useEventsStore().getIndexes"
-          v-on:click="this.index = index.key"
-          v-bind:class="index.key === this.index ? 'btn-row-active' : ''"
-      >
-        {{ index.value }}
-      </button>
-      <button
-          v-if="this.index-useEventsStore().getStep >= 0"
-          v-on:click="this.index = this.index-useEventsStore().getStep"
-      >
-        {{ "قبلی" }}
-      </button>
-      <button v-else class="span-row">
-        {{ "قبلی" }}
-      </button>
+      <!-- opening the events section -->
+      <div class="btn-row">
+        <button
+            v-if="this.index+useEventsStore().getStep < useEventsStore().getTotalNumberOfEvents"
+            v-on:click="this.index = this.index+useEventsStore().getStep"
+        >
+          {{ "بعدی" }}
+        </button>
+        <button v-else class="span-row">
+          {{ "بعدی" }}
+        </button>
+        <button
+            v-for="index in useEventsStore().getIndexes"
+            v-on:click="this.index = index.key"
+            v-bind:class="index.key === this.index ? 'btn-row-active' : ''"
+        >
+          {{ index.value }}
+        </button>
+        <button
+            v-if="this.index-useEventsStore().getStep >= 0"
+            v-on:click="this.index = this.index-useEventsStore().getStep"
+        >
+          {{ "قبلی" }}
+        </button>
+        <button v-else class="span-row">
+          {{ "قبلی" }}
+        </button>
+      </div>
     </div>
   </main>
 </template>
@@ -75,6 +76,8 @@ export default {
 }
 
 .btn-row {
+  margin-top: 20px;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
