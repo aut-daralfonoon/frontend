@@ -46,6 +46,14 @@ export default {
         this.viewElement('event-view' + this.id, 1)
     )
     document.getElementById('event' + this.id).addEventListener('mouseleave',
+        this.viewElement('event-view' + this.id, 0)
+    )
+  },
+  updated() {
+    document.getElementById('event' + this.id).addEventListener('mouseover',
+        this.viewElement('event-view' + this.id, 1)
+    )
+    document.getElementById('event' + this.id).addEventListener('mouseleave',
       this.viewElement('event-view' + this.id, 0)
     )
   }
