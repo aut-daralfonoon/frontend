@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .e-text {
-  padding: 20px;
+  padding: 25px;
   width: 60%;
 }
 
