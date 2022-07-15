@@ -77,6 +77,7 @@ export default {
 .btn-row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn-row > button {
