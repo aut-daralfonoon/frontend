@@ -83,6 +83,7 @@ export default {
   border-radius: 2px;
   float: left;
   margin-left: 5px;
+  text-decoration: none;
 }
 
 .dr-btn {
