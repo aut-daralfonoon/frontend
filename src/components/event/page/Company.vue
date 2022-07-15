@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="e-container">
+  <div>
     <div class="e-text">
       <h2 style="border-bottom: 1px solid gray; padding: 5px 0;">
         {{ name }}
@@ -37,22 +37,6 @@ export default {
 </script>
 
 <style scoped>
-.e-container {
-  /* flex */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  /* container style */
-  width: 60%;
-  margin: 40px auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.39);;
-
-  /* colors */
-  background-color: #efe1ba;
-}
-
 .e-text {
   padding: 20px;
   width: 60%;
@@ -66,12 +50,6 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-  .e-container {
-    flex-direction: column;
-    text-align: center;
-    width: 80%;
-  }
-
   .e-text {
     width: 100%;
   }
