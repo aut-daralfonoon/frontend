@@ -20,7 +20,7 @@ import { useEventsStore } from "../stores/events"
           class="event-box"
       ></SmallEvent>
       <!-- opening the events section -->
-      <EventSection @update-index="this.updateIndex" />
+      <EventSection style="margin-top: 160px;" @update-index="this.updateIndex" />
     </div>
   </main>
 </template>

@@ -13,7 +13,7 @@ useEventsStore().importEvents()
 </script>
 
 <template>
-  <main>
+  <main v-bind:class="this.$route.name === 'home' ? 'main-bg' : ''">
     <!-- Header component -->
     <Header v-if="this.$route.name !== 'home'"></Header>
     <!-- Router view -->
@@ -24,4 +24,11 @@ useEventsStore().importEvents()
 <style>
 /* importing the main css file of our application */
 @import './assets/base.css';
+
+.main-bg {
+  height: 100vh;
+  background-image: url("./assets/logo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>

@@ -4,7 +4,7 @@
 <template>
   <main>
     <div class="row">
-      <h1 id="inc-name" style="margin-bottom: 40px;">
+      <h1 id="inc-name" style="margin-bottom: 40px; color: white;">
         {{ "دارالفنون امیرکبیر" }}
       </h1>
       <div class="container">
