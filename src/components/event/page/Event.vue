@@ -46,7 +46,7 @@ defineProps({
 
 <script>
 // importing the event store
-import { useEventsStore } from "../../stores/events";
+import { useEventsStore } from "../../../stores/events";
 
 export default {
   name: "Event",
