@@ -56,12 +56,12 @@ export default {
 <style scoped>
 .e-text {
   padding: 25px;
-  width: 60%;
+  width: 40%;
 }
 
 .e-image {
   padding: 0;
-  width: 40%;
+  width: 60%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
