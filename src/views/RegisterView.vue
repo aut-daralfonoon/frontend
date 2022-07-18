@@ -19,7 +19,9 @@
 
 <script>
 // importing registration api
-import {sendRegistration} from "../api/register";
+import { sendRegistration } from "../api/register";
+// importing errors store
+import { useErrorsStore } from "../stores/errors";
 // importing vue router
 import router from "../router";
 
@@ -31,9 +33,13 @@ export default {
     }
   },
   methods: {
-    send() {
-      sendRegistration(this.$route.params.id, this.email)
-      router.push('/events')
+    async send() {
+      let err = await sendRegistration(this.$route.params.id, this.email)
+      if (err == null) {
+        await router.push('/events')
+      } else {
+        useErrorsStore().submitError("در ثبت نام شما خطایی رخ داده است.", "warn")
+      }
     }
   }
 }
