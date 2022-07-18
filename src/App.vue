@@ -1,12 +1,14 @@
 <script setup>
 // importing view component
 import Header from "./components/Header.vue";
+import ErrorBox from "./components/ErrorBox.vue";
 
 // importing router link and router view
 import { RouterView } from 'vue-router'
 
 // importing the event store
 import { useEventsStore } from "./stores/events";
+import { useErrorsStore } from "./stores/errors";
 
 // getting our events
 useEventsStore().importEvents()
@@ -16,6 +18,12 @@ useEventsStore().importEvents()
   <main v-bind:class="this.$route.name === 'home' ? 'main-bg' : ''">
     <!-- Header component -->
     <Header v-if="this.$route.name !== 'home'"></Header>
+    <!-- Error component -->
+    <ErrorBox
+        v-if="useErrorsStore().haveAnyErrors"
+        :message="useErrorsStore().getMessage"
+        :type="useErrorsStore().getType"
+    />
     <!-- Router view -->
     <RouterView />
   </main>
