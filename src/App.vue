@@ -6,12 +6,8 @@ import ErrorBox from "./components/ErrorBox.vue";
 // importing router link and router view
 import { RouterView } from 'vue-router'
 
-// importing the event store
-import { useEventsStore } from "./stores/events";
+// importing the error store
 import { useErrorsStore } from "./stores/errors";
-
-// getting our events
-useEventsStore().importEvents()
 </script>
 
 <template>
@@ -28,6 +24,19 @@ useEventsStore().importEvents()
     <RouterView />
   </main>
 </template>
+
+<script>
+// importing the event store
+import { useEventsStore } from "./stores/events";
+
+export default {
+  name: "App",
+  async created() {
+    // getting our events
+    await useEventsStore().importEvents()
+  }
+}
+</script>
 
 <style>
 /* importing the main css file of our application */

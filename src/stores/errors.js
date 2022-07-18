@@ -23,7 +23,7 @@ export const useErrorsStore = defineStore({
         reset() {
             this.withError = false
         },
-        sumbitError(msg, type) {
+        submitError(msg, type) {
             this.withError = true
             this.errorMessage = msg
             this.errorType = type
