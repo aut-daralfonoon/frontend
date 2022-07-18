@@ -31,9 +31,9 @@ import { useEventsStore } from "./stores/events";
 
 export default {
   name: "App",
-  async created() {
+  created() {
     // getting our events
-    await useEventsStore().importEvents()
+    useEventsStore().importEvents()
   }
 }
 </script>

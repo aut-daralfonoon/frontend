@@ -3,7 +3,7 @@
 import axios from "axios";
 
 export async function getEvents() {
-    const URL = 'localhost:8000/api/events'
+    const URL = 'http://localhost:8000/api/events'
 
     let err = null
     let data = null

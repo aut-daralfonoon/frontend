@@ -69,8 +69,8 @@ export const useEventsStore = defineStore({
   // store actions
   actions: {
     // this method gets the events from our back-end api
-    importEvents() {
-      const result = getEvents()
+    async importEvents() {
+      const result = await getEvents()
       if (result.error != null) {
         useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
 
