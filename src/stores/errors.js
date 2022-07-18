@@ -4,7 +4,7 @@ import { defineStore } from 'pinia'
 export const useErrorsStore = defineStore({
     id: 'errors',
     state: () => ({
-        withError: true,
+        withError: false,
         errorMessage: "خطایی رخ داده است",
         errorType: ""
     }),

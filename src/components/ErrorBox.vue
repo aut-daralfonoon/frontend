@@ -13,11 +13,19 @@ defineProps({
 
 <template>
   <div class="error-b" v-bind:class="selectClass()">
-    {{ message }}
+    <span>
+      {{ message }}
+    </span>
+    <button v-on:click="reset()" class="e-btn">
+      {{ "بستن" }}
+    </button>
   </div>
 </template>
 
 <script>
+// importing the errors store
+import { useErrorsStore } from "../stores/errors";
+
 export default {
   name: "ErrorBox",
   methods: {
@@ -31,6 +39,9 @@ export default {
         default:
           return 'normal'
       }
+    },
+    reset() {
+      useErrorsStore().reset()
     }
   }
 }
@@ -44,17 +55,31 @@ export default {
 }
 
 .warn {
-  background-color: yellow;
+  background-color: #ffff9a;
   color: black;
 }
 
 .danger {
-  background-color: red;
+  background-color: #ff4f4f;
   color: white;
 }
 
 .normal {
   background-color: #bebeff;
   color: blue;
+}
+
+.e-btn {
+  float: left;
+  background-color: inherit;
+  border: 1px solid black;
+  padding: 0 10px;
+  outline: none;
+  border-radius: 2px;
+}
+
+.e-btn:hover {
+  color: #7c7c7c;
+  border-color: #7c7c7c;
 }
 </style>
