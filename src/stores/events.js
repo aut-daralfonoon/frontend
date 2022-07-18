@@ -4,6 +4,9 @@ import { defineStore } from 'pinia'
 // import api
 import { getEvents } from '../api/event'
 
+// import error
+import { useErrorsStore } from "./errors";
+
 // exporting our events store
 export const useEventsStore = defineStore({
   // events store id (not used in project)
@@ -66,8 +69,14 @@ export const useEventsStore = defineStore({
   // store actions
   actions: {
     // this method gets the events from our back-end api
-    importEvents() {
-      this.events = getEvents()
+    async importEvents() {
+      const result = await getEvents()
+      if (result.error != null) {
+        useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
+
+        return
+      }
+      this.events = result.data
       this.total = this.events.length
     },
     // this method checks the event existence

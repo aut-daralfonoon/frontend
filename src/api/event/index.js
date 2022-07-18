@@ -1,121 +1,23 @@
 // getEvents makes an api call to our back-end
 // and receives all the events.
-export function getEvents() {
-    // TODO: API fetch for list of events
-    return [
-        {
-            id: 1,
-            title: "کارگاه گیت",
-            description: "Event description",
-            date: "17:00 2/2/2022",
-            enable: true,
-            poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
-            presenter: {
-                name: "Presenter name",
-                title: "Presenter title",
-                description: "Presenter description",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
-                company: {
-                    name: "Company name",
-                    description: "Company description",
-                    logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
-                },
-            },
-        },
-        {
-            id: 2,
-            title: "پیاده سازی http service با زبان Golang",
-            description: "Event description",
-            date: "17:00 2/2/2022",
-            enable: false,
-            poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
-            presenter: {
-                name: "Presenter name",
-                title: "Presenter title",
-                description: "Presenter description",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
-                company: {
-                    name: "Company name",
-                    description: "Company description",
-                    logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
-                },
-            },
-        },
-        {
-            id: 3,
-            title: "آشنایی با ابزار DevOps",
-            description: "Event description",
-            date: "17:00 2/2/2022",
-            enable: true,
-            poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
-            presenter: {
-                name: "Presenter name",
-                title: "Presenter title",
-                description: "Presenter description",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
-                company: {
-                    name: "Company name",
-                    description: "Company description",
-                    logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
-                },
-            },
-        },
-        {
-            id: 4,
-            title: "استفاده از ابزار Monitoring",
-            description: "Event description",
-            date: "17:00 2/2/2022",
-            enable: false,
-            poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
-            presenter: {
-                name: "Presenter name",
-                title: "Presenter title",
-                description: "Presenter description",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
-                company: {
-                    name: "Company name",
-                    description: "Company description",
-                    logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
-                },
-            },
-        },
-        {
-            id: 5,
-            title: "کارگاه Unit testing",
-            description: "Event description",
-            date: "17:00 2/2/2022",
-            enable: true,
-            poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
-            presenter: {
-                name: "Presenter name",
-                title: "Presenter title",
-                description: "Presenter description",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
-                company: {
-                    name: "Company name",
-                    description: "Company description",
-                    logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
-                },
-            },
-        },
-        {
-            id: 6,
-            title: "کارگاه آموزش Docker",
-            description: "Event description",
-            date: "17:00 2/2/2022",
-            enable: false,
-            poster: "https://lh3.googleusercontent.com/vtwxXwQJTzxUHeQ6xGxQuSslYd3b3W3yftMPsxcz9L1tzEmdmnPEc3cVwZpPJqGn-Yo",
-            presenter: {
-                name: "Presenter name",
-                title: "Presenter title",
-                description: "Presenter description",
-                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS717HKFkqCh4tbnQuw94a7zUWQmFjb3JAvepM1SVOE5WtQJyztvStgFNEOlbtaTk1d660&usqp=CAU",
-                company: {
-                    name: "Company name",
-                    description: "Company description",
-                    logo: "https://cdn.logo.com/hotlink-ok/logo-social.png",
-                },
-            },
-        },
-    ]
+import axios from "axios";
+
+export async function getEvents() {
+    const URL = 'http://localhost:8000/api/events'
+
+    let err = null
+    let data = null
+
+    await axios.get(URL)
+        .then((response) => {
+            data = response.data
+        })
+        .catch((error) => {
+            err = error
+        })
+
+    return {
+        data: data,
+        error: err
+    }
 }
