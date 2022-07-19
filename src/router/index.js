@@ -5,7 +5,7 @@ import HomeView from '../views/home/HomeView.vue'
 import AboutView from '../views/about/AboutView.vue'
 import AllEventsView from '../views/event/all-events/AllEventsView.vue'
 import SingleEventView from '../views/event/single-event/SingleEventView.vue'
-import EventRegisterView from '../views/event/register/EventRegisterView.vue'
+import EventRegisterView from '../views/register/event/EventRegisterView.vue'
 
 
 const router = createRouter({

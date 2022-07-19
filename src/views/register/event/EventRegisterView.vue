@@ -18,9 +18,7 @@
 </template>
 
 <script>
-// importing registration api
-import { sendRegistration } from "./api/register.js";
-// importing errors store
+import { fetchEventRegisterApi } from "./request";
 import { useErrorsStore } from "../../../stores/errors/errors";
 
 export default {
@@ -31,13 +29,14 @@ export default {
     }
   },
   methods: {
-    async send() {
-      let err = await sendRegistration(this.$route.params.id, this.email)
-      if (err == null) {
-        await this.$router.push('/events')
-      } else {
-        useErrorsStore().submitError("در ثبت نام شما خطایی رخ داده است.", "warn")
-      }
+    send() {
+      fetchEventRegisterApi(this.$route.params.id, this.email)
+        .then((message) => {
+          this.$router.push('/events')
+        })
+        .catch((error) => {
+          useErrorsStore().submitError("در ثبت نام شما خطایی رخ داده است.", "warn")
+        })
     }
   }
 }
