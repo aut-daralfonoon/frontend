@@ -12,13 +12,15 @@ defineProps({
 </script>
 
 <template>
-  <div class="error-b" v-bind:class="selectClass()">
+  <div class="er-container">
+    <div class="error-b" v-bind:class="selectClass()">
     <span>
       {{ message }}
     </span>
-    <button v-on:click="reset()" class="e-btn">
-      {{ "بستن" }}
-    </button>
+      <button v-on:click="reset()" class="e-btn">
+        {{ "بستن" }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -47,10 +49,28 @@ export default {
 </script>
 
 <style scoped>
-.error-b {
+.er-container {
   width: 100%;
   margin: 20px 0;
+}
+
+.error-b {
+  width: 50%;
   padding: 10px 20px;
+  border-radius: 2px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+
+  /* setting a transition */
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition:all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.error-b:hover {
+  position: relative;
+  top: -2px;
 }
 
 .warn {
