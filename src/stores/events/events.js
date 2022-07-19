@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { useErrorsStore } from "../errors/errors";
 import { fetGetEventsApi } from "./request";
 
 export const useEventsStore = defineStore({
@@ -54,10 +53,6 @@ export const useEventsStore = defineStore({
         .then((events) => {
           this.events = events
           this.total = this.events.length
-        })
-        .catch((error) => {
-          console.error(error)
-          useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
         })
     },
     isEventValid(id) {
