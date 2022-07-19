@@ -7,9 +7,7 @@ class Animation {
     }
 
     // write function updates the header
-    write() {
-        // update time is 0.3 seconds
-        let time = 300;
+    write(time) {
         // creating the message
         let message = self.text.slice(0, self.index)
         // updating index
@@ -25,8 +23,7 @@ class Animation {
         // get the element and update the text
         document.getElementById(self.elementID).innerText = message;
 
-        // recall this function
-        setTimeout(self.write, time);
+        return time
     }
 }
 

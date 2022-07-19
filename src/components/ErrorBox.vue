@@ -30,7 +30,6 @@ export default {
   name: "ErrorBox",
   methods: {
     selectClass() {
-      console.log(this.type)
       switch (this.type) {
         case 'warn':
           return 'warn'

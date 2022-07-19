@@ -34,8 +34,17 @@ export default {
     }
   },
   mounted() {
-    // when mounted, call the script for header change
-    this.handler.write()
+    this.animate()
+  },
+  methods: {
+    animate() {
+      // when mounted, call the script for header change
+      // update time is 0.3 seconds
+      let time = 300;
+      time = this.handler.write(time)
+      // recall this function
+      setTimeout(this.animate, time);
+    }
   }
 }
 </script>
