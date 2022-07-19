@@ -8,25 +8,11 @@ import { useErrorsStore } from "./errors";
 // and receives all the events.
 import httpService from "../services/http";
 import { API } from "../configs/urls";
+import { transformEvent } from "../utils/transforms";
 
 async function getEvents() {
   const url = `${API}/events/`
-
-  let err = null
-  let data = null
-
-  await httpService.get(url)
-      .then((response) => {
-        data = response.data
-      })
-      .catch((error) => {
-        err = error
-      })
-
-  return {
-    data: data,
-    error: err
-  }
+  return httpService.get(url).then(transformEvent)
 }
 
 // exporting our events store
@@ -92,14 +78,14 @@ export const useEventsStore = defineStore({
   actions: {
     // this method gets the events from our back-end api
     async importEvents() {
-      const result = await getEvents()
-      if (result.error != null) {
-        useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
-
-        return
-      }
-      this.events = result.data
-      this.total = this.events.length
+      await getEvents()
+          .then((events) => {
+            this.events = events
+            this.total = this.events.length
+          })
+          .catch((error) => {
+            useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
+          })
     },
     // this method checks the event existence
     isEventValid(id) {
