@@ -19,11 +19,11 @@
 
 <script>
 // importing registration api
-import { sendRegistration } from "../api/register";
+import { sendRegistration } from "../../api/register";
 // importing errors store
-import { useErrorsStore } from "../stores/errors";
+import { useErrorsStore } from "../../stores/errors";
 // importing vue router
-import router from "../router";
+import router from "../../router";
 
 export default {
   name: "RegisterView",

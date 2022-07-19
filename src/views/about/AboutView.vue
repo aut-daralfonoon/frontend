@@ -3,7 +3,7 @@
 
 <template>
   <main class="ab-container">
-    <img class="home-logo" src="../assets/images/logo.jpg" alt="logo" />
+    <img class="home-logo" src="../../assets/images/logo.jpg" alt="logo" />
     <h2 style="margin-bottom: 20px;">
       {{ "مجموعه دارالفنون امیرکبیر" }}
     </h2>

@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // importing views
-import HomeView from '../views/HomeView.vue'
-import AboutView from '../views/AboutView.vue'
-import EventsView from '../views/EventsView.vue'
-import EventView from '../views/EventView.vue'
-import RegisterView from '../views/RegisterView.vue'
+import HomeView from '../views/home/HomeView.vue'
+import AboutView from '../views/about/AboutView.vue'
+import EventsView from '../views/event/EventsView.vue'
+import EventView from '../views/event/EventView.vue'
+import RegisterView from '../views/event/RegisterView.vue'
 
 
 const router = createRouter({
