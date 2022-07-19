@@ -1,6 +1,6 @@
 <script setup>
 // importing vue components
-import EventPage from "../../../components/event/page/EventPage.vue";
+import EventPage from "./components/EventPage.vue";
 
 // importing the event store
 import { useEventsStore } from "../../../stores/events"

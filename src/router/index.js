@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 // importing views
 import HomeView from '../views/home/HomeView.vue'
 import AboutView from '../views/about/AboutView.vue'
+import EventView from '../views/event/event/EventView.vue'
 import EventsView from '../views/event/events/EventsView.vue'
-import EventView from '../views/event/event-page/EventView.vue'
 import RegisterView from '../views/event/register/RegisterView.vue'
 
 
