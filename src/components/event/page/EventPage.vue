@@ -57,9 +57,9 @@ defineProps({
     <Company
         v-else-if="current === 'company'"
         class="e-container"
-        :name="event.presenter.company.name"
-        :description="event.presenter.company.description"
-        :logo="event.presenter.company.logo"
+        :name="event.company.name"
+        :description="event.company.description"
+        :logo="event.company.logo"
     />
   </main>
 </template>
