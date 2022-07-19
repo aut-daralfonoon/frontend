@@ -3,7 +3,11 @@ import httpService from "../../services/http";
 import { API } from "../../configs/urls";
 import { transformEvent } from "../../utils/transforms";
 
+function transformEventsResponse({ data: events }) {
+    return events.map(transformEvent)
+}
+
 export function fetGetEventsApi() {
     const url = `${API}/events/`
-    return httpService.get(url).then(transformEvent)
+    return httpService.get(url).then(transformEventsResponse)
 }

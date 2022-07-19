@@ -2,7 +2,7 @@ import transformPresenter from "./presenter";
 import transformCompany from "./company";
 
 export default function transformEvent({
-    _id: id,
+    id,
     title,
     description,
     date,
@@ -18,7 +18,7 @@ export default function transformEvent({
         date: date,
         enable: enable,
         poster: poster,
-        presenter: presenter.map(transformPresenter),
-        company: company.map(transformCompany)
+        presenter: transformPresenter(presenter),
+        company: transformCompany(company)
     }
 }
