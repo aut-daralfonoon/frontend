@@ -1,7 +1,7 @@
 <script setup>
 // importing vue components
-import SmallEvent from "../../../components/event/SmallEvent.vue";
-import EventSection from "../../../components/event/EventSection.vue";
+import SmallEvent from "./components/SmallEvent.vue";
+import EventSection from "./components/EventSection.vue";
 
 // importing the event store
 import { useEventsStore } from "../../../stores/events"
