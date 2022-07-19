@@ -1,11 +1,33 @@
 // importing store defining from pinia.js
 import { defineStore } from 'pinia'
 
-// import api
-import { getEvents } from '../api/event.js'
-
 // import error
 import { useErrorsStore } from "./errors";
+
+// getEvents makes an api call to our back-end
+// and receives all the events.
+import httpService from "../services/http";
+import { API } from "../configs/urls";
+
+async function getEvents() {
+  const url = `${API}/events/`
+
+  let err = null
+  let data = null
+
+  await httpService.get(url)
+      .then((response) => {
+        data = response.data
+      })
+      .catch((error) => {
+        err = error
+      })
+
+  return {
+    data: data,
+    error: err
+  }
+}
 
 // exporting our events store
 export const useEventsStore = defineStore({
