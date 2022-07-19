@@ -1,53 +1,37 @@
-// importing store defining from pinia.js
 import { defineStore } from 'pinia'
-// import error
 import { useErrorsStore } from "../errors/errors";
-// importing getEvents method
 import { fetGetEventsApi } from "./request";
 
-// exporting our events store
 export const useEventsStore = defineStore({
-  // events store id (not used in project)
   id: 'events',
-  // events store has only one array of events
   state: () => ({
     step: 3,
     total: 0,
     events: [],
   }),
-  // store getters
   getters: {
-    // getting an event information by its id
     getEventById: (state) => {
-      // returning a function to pass the id argument to it
       return (id) => {
-        // creating an empty event
         let e = null;
-        // search for event
         state.events.forEach((event) => {
           if (event.id === id) {
             e = event;
           }
         });
-        // returning the event
         return e;
       }
     },
-    // getting all events
     getAllEvents: (state) => {
       return (index) => {
         return state.events.slice(index, index + state.step);
       }
     },
-    // get total number of events
     getTotalNumberOfEvents: (state) => {
       return state.total
     },
-    // get step number
     getStep: (state) => {
       return state.step
     },
-    // get all indexes
     getIndexes: (state) => {
       let a = [];
       let counter = 1;
@@ -64,21 +48,18 @@ export const useEventsStore = defineStore({
       return a;
     }
   },
-  // store actions
   actions: {
-    // this method gets the events from our back-end api
-    async importEvents() {
-      await fetGetEventsApi()
-          .then((events) => {
-            this.events = events
-            this.total = this.events.length
-          })
-          .catch((error) => {
-            console.log(error)
-            useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
-          })
+    importEvents() {
+      fetGetEventsApi()
+        .then((events) => {
+          this.events = events
+          this.total = this.events.length
+        })
+        .catch((error) => {
+          console.error(error)
+          useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
+        })
     },
-    // this method checks the event existence
     isEventValid(id) {
       let flag = false;
       this.events.forEach((event) => {
