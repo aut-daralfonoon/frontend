@@ -2,7 +2,7 @@
 import { defineStore } from 'pinia'
 
 // import api
-import { getEvents } from '../api/event'
+import { getEvents } from '../api/event.js'
 
 // import error
 import { useErrorsStore } from "./errors";

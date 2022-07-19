@@ -5,7 +5,7 @@ import HomeView from '../views/home/HomeView.vue'
 import AboutView from '../views/about/AboutView.vue'
 import EventView from '../views/event/event/EventView.vue'
 import EventsView from '../views/event/events/EventsView.vue'
-import RegisterView from '../views/event/register/RegisterView.vue'
+import EventRegisterView from '../views/event/register/EventRegisterView.vue'
 
 
 const router = createRouter({
@@ -34,7 +34,7 @@ const router = createRouter({
     {
       path: '/register/:id',
       name: 'register',
-      component: RegisterView,
+      component: EventRegisterView,
     }
   ]
 })

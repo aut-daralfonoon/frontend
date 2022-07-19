@@ -19,12 +19,12 @@
 
 <script>
 // importing registration api
-import { sendRegistration } from "./api/register";
+import { sendRegistration } from "./api/register.js";
 // importing errors store
 import { useErrorsStore } from "../../../stores/errors";
 
 export default {
-  name: "RegisterView",
+  name: "EventRegisterView",
   data() {
     return {
       email: ""
