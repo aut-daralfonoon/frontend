@@ -1,6 +1,6 @@
 // getEvents makes an api call to our back-end
 // and receives all the events.
-import axios from "axios";
+import httpService from "../services/http";
 
 export async function getEvents() {
     const URL = 'http://localhost:8000/api/events'
@@ -8,7 +8,7 @@ export async function getEvents() {
     let err = null
     let data = null
 
-    await axios.get(URL)
+    await httpService.get(URL)
         .then((response) => {
             data = response.data
         })
