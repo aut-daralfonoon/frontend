@@ -19,7 +19,7 @@
 
 <script>
 // importing registration api
-import { sendRegistration } from "../../../api/register";
+import { sendRegistration } from "./api/register";
 // importing errors store
 import { useErrorsStore } from "../../../stores/errors";
 
