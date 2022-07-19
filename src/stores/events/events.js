@@ -1,19 +1,9 @@
 // importing store defining from pinia.js
 import { defineStore } from 'pinia'
-
 // import error
-import { useErrorsStore } from "./errors";
-
-// getEvents makes an api call to our back-end
-// and receives all the events.
-import httpService from "../services/http";
-import { API } from "../configs/urls";
-import { transformEvent } from "../utils/transforms";
-
-async function getEvents() {
-  const url = `${API}/events/`
-  return httpService.get(url).then(transformEvent)
-}
+import { useErrorsStore } from "../errors/errors";
+// importing getEvents method
+import { fetGetEventsApi } from "./request";
 
 // exporting our events store
 export const useEventsStore = defineStore({
@@ -78,12 +68,13 @@ export const useEventsStore = defineStore({
   actions: {
     // this method gets the events from our back-end api
     async importEvents() {
-      await getEvents()
+      await fetGetEventsApi()
           .then((events) => {
             this.events = events
             this.total = this.events.length
           })
           .catch((error) => {
+            console.log(error)
             useErrorsStore().submitError("خطایی در ارتباط با سرور رخ داده است", "danger")
           })
     },

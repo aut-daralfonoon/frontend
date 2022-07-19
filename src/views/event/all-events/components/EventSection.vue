@@ -1,6 +1,6 @@
 <script setup>
 // importing the event store
-import { useEventsStore } from "../../../../stores/events"
+import { useEventsStore } from "../../../../stores/events/events"
 // importing persian number
 import PN from "persian-number"
 </script>

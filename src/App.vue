@@ -7,7 +7,7 @@ import ErrorBox from "./components/ErrorBox.vue";
 import { RouterView } from 'vue-router'
 
 // importing the error store
-import { useErrorsStore } from "./stores/errors";
+import { useErrorsStore } from "./stores/errors/errors";
 </script>
 
 <template>
@@ -27,7 +27,7 @@ import { useErrorsStore } from "./stores/errors";
 
 <script>
 // importing the event store
-import { useEventsStore } from "./stores/events";
+import { useEventsStore } from "./stores/events/events";
 
 export default {
   name: "App",
