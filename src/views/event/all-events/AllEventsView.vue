@@ -27,7 +27,7 @@ import { useEventsStore } from "../../../stores/events"
 
 <script>
 export default {
-  name: "EventsView",
+  name: "AllEventsView",
   data() {
     return {
       index: 0,

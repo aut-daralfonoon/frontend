@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 // importing views
 import HomeView from '../views/home/HomeView.vue'
 import AboutView from '../views/about/AboutView.vue'
-import EventView from '../views/event/event/EventView.vue'
-import EventsView from '../views/event/events/EventsView.vue'
+import AllEventsView from '../views/event/all-events/AllEventsView.vue'
+import SingleEventView from '../views/event/single-event/SingleEventView.vue'
 import EventRegisterView from '../views/event/register/EventRegisterView.vue'
 
 
@@ -24,12 +24,12 @@ const router = createRouter({
     {
       path: "/events", // all the events in home page
       name: "events",
-      component: EventsView,
+      component: AllEventsView,
     },
     {
       path: '/event/:id', // a single event page
       name: 'event',
-      component: EventView,
+      component: SingleEventView,
     },
     {
       path: '/register/:id',
