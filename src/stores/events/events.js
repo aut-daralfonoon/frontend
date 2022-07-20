@@ -54,6 +54,9 @@ export const useEventsStore = defineStore({
           this.events = events
           this.total = this.events.length
         })
+        .catch(() => {
+          console.error("Problem loading data")
+        })
     },
     isEventValid(id) {
       let flag = false;
