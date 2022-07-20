@@ -1,7 +1,7 @@
 <script setup>
 import Header from "./components/Header.vue";
 import MessageBox from "./components/MessageBox.vue";
-import { RouterView } from 'vue-router'
+import RoutesWithTransition from "./router/RoutesWithTransition.vue";
 import { useNotificationStore } from "./stores/notification";
 </script>
 
@@ -15,7 +15,7 @@ import { useNotificationStore } from "./stores/notification";
         :message="useNotificationStore().getMessage"
         :type="useNotificationStore().getType"
     />
-    <RouterView />
+    <RoutesWithTransition />
   </main>
 </template>
 
