@@ -1,12 +1,7 @@
 <script setup>
-// importing view component
 import Header from "./components/Header.vue";
 import MessageBox from "./components/MessageBox.vue";
-
-// importing router link and router view
 import { RouterView } from 'vue-router'
-
-// importing the error store
 import { useNotificationStore } from "./stores/notification";
 </script>
 
@@ -20,13 +15,11 @@ import { useNotificationStore } from "./stores/notification";
         :message="useNotificationStore().getMessage"
         :type="useNotificationStore().getType"
     />
-    <!-- Router view -->
     <RouterView />
   </main>
 </template>
 
 <script>
-// importing the event store and notification store
 import { useEventsStore } from "./stores/events";
 import { useNotificationStore } from "./stores/notification";
 
@@ -49,5 +42,4 @@ export default {
 <style>
 /* importing the main css file of our application */
 @import './assets/base.css';
-
 </style>
