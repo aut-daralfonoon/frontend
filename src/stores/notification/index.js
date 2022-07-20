@@ -1,11 +1,11 @@
 // importing store defining from pinia.js
 import { defineStore } from 'pinia'
 
-export const useErrorsStore = defineStore({
+export const useNotificationStore = defineStore({
     id: 'notification',
     state: () => ({
         enable: false,
-        message: "خطایی رخ داده است",
+        message: "",
         type: ""
     }),
     getters: {

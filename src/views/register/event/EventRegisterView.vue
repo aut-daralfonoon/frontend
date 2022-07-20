@@ -19,7 +19,7 @@
 
 <script>
 import { fetchEventRegisterApi } from "./request";
-import { useErrorsStore } from "../../../stores/notification";
+import { useNotificationStore } from "../../../stores/notification";
 
 export default {
   name: "EventRegisterView",
@@ -35,7 +35,7 @@ export default {
           this.$router.push('/events')
         })
         .catch((error) => {
-          useErrorsStore().submit("در ثبت نام شما خطایی رخ داده است.", "warn")
+          useNotificationStore().submit("در ثبت نام شما خطایی رخ داده است.", "warn")
         })
     }
   }

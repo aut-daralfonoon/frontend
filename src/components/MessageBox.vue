@@ -26,7 +26,7 @@ defineProps({
 
 <script>
 // importing the errors store
-import { useErrorsStore } from "../stores/notification";
+import { useNotificationStore } from "../stores/notification";
 
 export default {
   name: "MessageBox",
@@ -42,7 +42,7 @@ export default {
       }
     },
     reset() {
-      useErrorsStore().reset()
+      useNotificationStore().reset()
     }
   }
 }

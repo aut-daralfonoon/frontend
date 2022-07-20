@@ -7,7 +7,7 @@ import MessageBox from "./components/MessageBox.vue";
 import { RouterView } from 'vue-router'
 
 // importing the error store
-import { useErrorsStore } from "./stores/notification";
+import { useNotificationStore } from "./stores/notification";
 </script>
 
 <template>
@@ -16,9 +16,9 @@ import { useErrorsStore } from "./stores/notification";
     <Header v-if="this.$route.name !== 'home'"></Header>
     <!-- Error component -->
     <MessageBox
-        v-if="useErrorsStore().isOn"
-        :message="useErrorsStore().getMessage"
-        :type="useErrorsStore().getType"
+        v-if="useNotificationStore().isOn"
+        :message="useNotificationStore().getMessage"
+        :type="useNotificationStore().getType"
     />
     <!-- Router view -->
     <RouterView />
@@ -28,7 +28,7 @@ import { useErrorsStore } from "./stores/notification";
 <script>
 // importing the event store and notification store
 import { useEventsStore } from "./stores/events";
-import { useErrorsStore } from "./stores/notification";
+import { useNotificationStore } from "./stores/notification";
 
 export default {
   name: "App",
@@ -36,7 +36,7 @@ export default {
     // getting our events
     useEventsStore().importEvents()
 
-    useErrorsStore().submit("Hello")
+    useNotificationStore().submit("Hello")
   }
 }
 </script>
