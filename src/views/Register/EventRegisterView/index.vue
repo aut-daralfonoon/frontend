@@ -20,6 +20,7 @@
 <script>
 import { fetchEventRegisterApi } from "./request";
 import { useNotificationStore } from "../../../stores/notification";
+import { validateEventId, validateEmail } from "../../../utils/validators";
 
 export default {
   name: "EventRegisterView",
@@ -30,13 +31,19 @@ export default {
   },
   methods: {
     send() {
-      fetchEventRegisterApi(this.$route.params.id, this.email)
-        .then((message) => {
-          this.$router.push('/events')
-        })
-        .catch((error) => {
-          useNotificationStore().submit("در ثبت نام شما خطایی رخ داده است.", "warn")
-        })
+      const id = this.$route.params.id
+      if (validateEventId(id) && validateEmail(this.email)) {
+        fetchEventRegisterApi(id, this.email)
+            .then(() => {
+              useNotificationStore().submit("ثبت نام شما انجام شد", "normal")
+              this.$router.push('/events')
+            })
+            .catch(() => {
+              useNotificationStore().submit("در ثبت نام شما خطایی رخ داده است.", "warn")
+            })
+      } else {
+        useNotificationStore().submit("صحت اطلاعات وارد شده مورد تایید نمی‌باشد", "danger")
+      }
     }
   }
 }
