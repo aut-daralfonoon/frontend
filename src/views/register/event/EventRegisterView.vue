@@ -35,7 +35,7 @@ export default {
           this.$router.push('/events')
         })
         .catch((error) => {
-          useErrorsStore().submitError("در ثبت نام شما خطایی رخ داده است.", "warn")
+          useErrorsStore().submit("در ثبت نام شما خطایی رخ داده است.", "warn")
         })
     }
   }

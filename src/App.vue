@@ -16,7 +16,7 @@ import { useErrorsStore } from "./stores/notification";
     <Header v-if="this.$route.name !== 'home'"></Header>
     <!-- Error component -->
     <ErrorBox
-        v-if="useErrorsStore().haveAnyErrors"
+        v-if="useErrorsStore().isOn"
         :message="useErrorsStore().getMessage"
         :type="useErrorsStore().getType"
     />
@@ -26,14 +26,17 @@ import { useErrorsStore } from "./stores/notification";
 </template>
 
 <script>
-// importing the event store
+// importing the event store and notification store
 import { useEventsStore } from "./stores/events";
+import { useErrorsStore } from "./stores/notification";
 
 export default {
   name: "App",
   created() {
     // getting our events
     useEventsStore().importEvents()
+
+    useErrorsStore().submit("Hello")
   }
 }
 </script>

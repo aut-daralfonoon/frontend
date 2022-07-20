@@ -2,31 +2,31 @@
 import { defineStore } from 'pinia'
 
 export const useErrorsStore = defineStore({
-    id: 'errors',
+    id: 'notification',
     state: () => ({
-        withError: false,
-        errorMessage: "خطایی رخ داده است",
-        errorType: ""
+        enable: false,
+        message: "خطایی رخ داده است",
+        type: ""
     }),
     getters: {
-        haveAnyErrors: (state) => {
-            return state.withError
+        isOn: (state) => {
+            return state.enable
         },
         getMessage: (state) => {
-            return state.errorMessage
+            return state.message
         },
         getType: (state) => {
-            return state.errorType
+            return state.type
         }
     },
     actions: {
         reset() {
-            this.withError = false
+            this.enable = false
         },
-        submitError(msg, type) {
-            this.withError = true
-            this.errorMessage = msg
-            this.errorType = type
+        submit(msg, type) {
+            this.enable = true
+            this.message = msg
+            this.type = type
         }
     }
 })
