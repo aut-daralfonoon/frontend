@@ -35,8 +35,6 @@ export default {
   created() {
     // getting our events
     useEventsStore().importEvents()
-
-    useNotificationStore().submit("Hello")
   }
 }
 </script>

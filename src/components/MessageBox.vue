@@ -37,6 +37,8 @@ export default {
           return 'warn'
         case 'danger':
           return 'danger'
+        case 'ok':
+          return 'success'
         default:
           return 'normal'
       }
@@ -75,17 +77,22 @@ export default {
 
 .warn {
   background-color: #ffff9a;
-  color: black;
+  color: #000000;
 }
 
 .danger {
   background-color: #ff4f4f;
-  color: white;
+  color: #ffffff;
 }
 
 .normal {
   background-color: #bebeff;
-  color: blue;
+  color: #0000ff;
+}
+
+.success {
+  background-color: #05794f;
+  color: #ffffff;
 }
 
 .e-btn {
