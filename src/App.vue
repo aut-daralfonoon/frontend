@@ -35,6 +35,13 @@ export default {
   created() {
     // getting our events
     useEventsStore().importEvents()
+
+    // check the events
+    if (useEventsStore().getTotalNumberOfEvents === 0) {
+      useNotificationStore().submit("در ارتباط با سرور اصلی مشکلی پیش آمده است", "danger")
+    } else {
+      useNotificationStore().submit("خوش آمدید", "ok")
+    }
   }
 }
 </script>

@@ -14,9 +14,9 @@ defineProps({
 <template>
   <div class="er-container">
     <div class="error-b" v-bind:class="selectClass()">
-    <span>
-      {{ message }}
-    </span>
+      <span>
+        {{ message }}
+      </span>
       <button v-on:click="reset()" class="e-btn">
         {{ "بستن" }}
       </button>
@@ -57,7 +57,7 @@ export default {
 }
 
 .error-b {
-  width: 50%;
+  width: 30%;
   padding: 10px 20px;
   border-radius: 2px;
   margin: 0 auto;
