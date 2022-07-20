@@ -3,7 +3,7 @@
 import EventPage from "./components/EventPage.vue";
 
 // importing the event store
-import { useEventsStore } from "../../../stores/events/events"
+import { useEventsStore } from "../../../stores/events"
 </script>
 
 <template>

@@ -4,7 +4,7 @@ import SmallEvent from "./components/SmallEvent.vue";
 import EventSection from "./components/EventSection.vue";
 
 // importing the event store
-import { useEventsStore } from "../../../stores/events/events"
+import { useEventsStore } from "../../../stores/events"
 </script>
 
 <template>

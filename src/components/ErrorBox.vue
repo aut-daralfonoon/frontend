@@ -26,7 +26,7 @@ defineProps({
 
 <script>
 // importing the errors store
-import { useErrorsStore } from "../stores/errors/errors";
+import { useErrorsStore } from "../stores/notification";
 
 export default {
   name: "ErrorBox",

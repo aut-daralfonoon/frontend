@@ -19,7 +19,7 @@
 
 <script>
 import { fetchEventRegisterApi } from "./request";
-import { useErrorsStore } from "../../../stores/errors/errors";
+import { useErrorsStore } from "../../../stores/notification";
 
 export default {
   name: "EventRegisterView",
