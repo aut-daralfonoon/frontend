@@ -29,7 +29,7 @@ defineProps({
 import { useErrorsStore } from "../stores/notification";
 
 export default {
-  name: "ErrorBox",
+  name: "MessageBox",
   methods: {
     selectClass() {
       switch (this.type) {

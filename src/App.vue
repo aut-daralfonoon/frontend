@@ -1,7 +1,7 @@
 <script setup>
 // importing view component
 import Header from "./components/Header.vue";
-import ErrorBox from "./components/ErrorBox.vue";
+import MessageBox from "./components/MessageBox.vue";
 
 // importing router link and router view
 import { RouterView } from 'vue-router'
@@ -15,7 +15,7 @@ import { useErrorsStore } from "./stores/notification";
     <!-- Header component -->
     <Header v-if="this.$route.name !== 'home'"></Header>
     <!-- Error component -->
-    <ErrorBox
+    <MessageBox
         v-if="useErrorsStore().isOn"
         :message="useErrorsStore().getMessage"
         :type="useErrorsStore().getType"
