@@ -1,5 +1,5 @@
-import transformEvent from "./events.js";
+import transformEventsResponse from "./events.js";
 
 export {
-    transformEvent
+    transformEventsResponse
 }

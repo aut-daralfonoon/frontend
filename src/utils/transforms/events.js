@@ -1,7 +1,7 @@
 import transformPresenter from "./presenter";
 import transformCompany from "./company";
 
-export default function transformEvent({
+function transformEvent({
     id,
     title,
     description,
@@ -21,4 +21,8 @@ export default function transformEvent({
         presenter: transformPresenter(presenter),
         company: transformCompany(company)
     }
+}
+
+export default function transformEventsResponse({ data: events }) {
+    return events.map(transformEvent)
 }
