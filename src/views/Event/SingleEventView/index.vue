@@ -1,17 +1,14 @@
 <script setup>
-// importing vue components
 import EventPage from "./components/EventPage.vue";
-
-// importing the event store
-import { useEventsStore } from "../../../stores/events"
+import { validateEventId } from "../../../utils/validators";
 </script>
 
 <template>
   <main>
     <!-- creating an event component -->
     <EventPage
-        v-if="useEventsStore().isEventValid(Number(this.$route.params.id))"
-        :id="Number(this.$route.params.id)"
+        v-if="validateEventId(this.id)"
+        :id="Number(this.id)"
     />
     <!-- error handling for incorrect events -->
     <h3 v-else class="center-text">
@@ -19,6 +16,17 @@ import { useEventsStore } from "../../../stores/events"
     </h3>
   </main>
 </template>
+
+<script>
+export default {
+  name: "SingleEventView",
+  data() {
+    return {
+      id: Number(this.$route.params.id)
+    }
+  }
+}
+</script>
 
 <style scoped>
 .center-text {
