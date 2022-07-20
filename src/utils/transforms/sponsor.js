@@ -1,4 +1,4 @@
-export default function transformCompany({
+export default function transformSponsor({
     name,
     description,
     logo,

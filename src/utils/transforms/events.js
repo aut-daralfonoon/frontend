@@ -1,5 +1,5 @@
 import transformPresenter from "./presenter";
-import transformCompany from "./company";
+import transformSponsor from "./sponsor";
 
 function transformEvent({
     id,
@@ -9,7 +9,7 @@ function transformEvent({
     enable,
     poster,
     presenter: presenter,
-    company: company
+    sponsor: company
 }) {
     return {
         id: id,
@@ -19,7 +19,7 @@ function transformEvent({
         enable: enable,
         poster: poster,
         presenter: transformPresenter(presenter),
-        company: transformCompany(company)
+        company: transformSponsor(company)
     }
 }
 
