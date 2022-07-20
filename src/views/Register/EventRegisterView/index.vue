@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     send() {
-      const id = this.$route.params.id
+      const id = Number(this.$route.params.id)
       if (validateEventId(id) && validateEmail(this.email)) {
         fetchEventRegisterApi(id, this.email)
             .then(() => {
